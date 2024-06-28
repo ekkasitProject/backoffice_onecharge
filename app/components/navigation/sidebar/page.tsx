@@ -10,7 +10,7 @@ export default function Sidebar() {
     <div className="w-[220px] h-screen  bg-white z-20 left-0 top-0">
       <div>
           <Link href="/" className="cursor-pointer">
-            <img src="images/logo.png" className="p-5" />
+            <img src="images/logo_onecharge.png" className="p-5" />
           </Link>
         
         <Link href="/">
