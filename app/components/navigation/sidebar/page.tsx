@@ -7,15 +7,15 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className=" h-screen bg-white z-20 left-0 top-0">
+    <div className="w-[350px] h-screen bg-white z-20 left-0 top-0">
       <div>
           <Link href="/" className="cursor-pointer">
-            <img src="images/logo_onecharge.png" className="p-5 w-[250px]" />
+            <img src="images/logo_onecharge.png" className="p-5" />
           </Link>
         
         <Link href="/">
           <div
-            className={`flex ${
+            className={`flex justify-start items-center ${
               pathname === "/" ? "bg-[#EFF2FC]" : ""
             }  py-2 px-4 mx-2 mt-4 rounded-lg`}
           >
@@ -26,10 +26,10 @@ export default function Sidebar() {
                   : "images/icon_dashboard.png"
               }`}
               alt=""
-              className="w-[15px] h-[15px] mr-2"
+              className="w-[12px] h-[12px] mr-2"
             />
             <h1
-              className={`text-[12px] ${
+              className={`text-[10px] ${
                 pathname === "/" ? "text-[#355FF5]" : "text-[#6E82A5]"
               } font-semibold`}
             >
@@ -39,7 +39,7 @@ export default function Sidebar() {
         </Link>
         <Link href="/monitor">
           <div
-            className={`flex ${
+            className={`flex justify-start items-center ${
               pathname === "/monitor" ? "bg-[#EFF2FC]" : ""
             }  py-2 px-4 mx-2  rounded-lg`}
             >
@@ -50,10 +50,10 @@ export default function Sidebar() {
                   : "images/icon_dashboard.png"
               }`}
               alt=""
-              className="w-[15px] h-[15px] mr-2"
+              className="w-[12px] h-[12px] mr-2"
             />
             <h1
-              className={`text-[12px] ${
+              className={`text-[10px] ${
                 pathname === "/monitor" ? "text-[#355FF5]" : "text-[#6E82A5]"
               } font-semibold`}
             >
@@ -63,7 +63,7 @@ export default function Sidebar() {
         </Link>
         <Link href="/announcement">
           <div
-            className={`flex ${
+            className={`flex justify-start items-center ${
               pathname === "/announcement" ? "bg-[#EFF2FC]" : ""
             }  py-2 px-4 mx-2  rounded-lg`}
             >
@@ -74,10 +74,10 @@ export default function Sidebar() {
                   : "images/icon_dashboard.png"
               }`}
               alt=""
-              className="w-[15px] h-[15px] mr-2"
+              className="w-[12px] h-[12px] mr-2"
             />
             <h1
-              className={`text-[12px] ${
+              className={`text-[10px] ${
                 pathname === "/announcement"
                   ? "text-[#355FF5]"
                   : "text-[#6E82A5]"
