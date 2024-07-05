@@ -133,7 +133,7 @@ const TotalCharge = () => {
   };
 
   return (
-    <div className="w-[530px]  bg-white px-4 py-2 rounded-md">
+    <div className="w-[500px]  bg-white px-4 py-2 rounded-md">
       <div>
         <span className="text-[#364A63] text-[13px] mr-2 font-medium">
           Total Charge Session
@@ -142,7 +142,7 @@ const TotalCharge = () => {
           All Station in FastWave
         </span>
       </div>
-      <div className="flex w-[150px] my-4  justify-between">
+      <div className="flex w-[170px] my-4  justify-between">
         <button
           className={` text-[10px] font-light ${
             currentComponent === "All Station" &&
@@ -173,7 +173,7 @@ const TotalCharge = () => {
       </div>
 
       <div className="w-full bg-[#C8D8F4] h-[1px]" />
-      <div className="flex h-[200px] justify-between items-center">
+      <div className="flex justify-between items-center">
         <div className="flex flex-col w-[150px] justify-around h-full ">
           <div className=" flex flex-col justify-center items-center  h-[150px]">
             <p className="text-[#355FF5] text-[20px] font-medium">202</p>
@@ -197,7 +197,7 @@ const TotalCharge = () => {
 
         <div className="w-[1px] bg-[#C8D8F4] h-[200px]" />
 
-        <div className="w-[350px] ">
+        <div className="w-[300px] ">
           {currentComponent === "All Station" && (
             <Line
               data={dataAllStation}
