@@ -133,7 +133,7 @@ const TotalCharge = () => {
   };
 
   return (
-    <div className="w-[60%]  bg-white px-4 py-2 rounded-md ">
+    <div className="w-[400px]  bg-white px-4 py-2 rounded-md">
       <div>
         <span className="text-[#364A63] text-[13px] mr-2 font-medium">
           Total Charge Session
@@ -174,7 +174,7 @@ const TotalCharge = () => {
 
       <div className="w-full bg-[#C8D8F4] h-[1px]" />
       <div className="flex justify-between items-center">
-        <div className="flex flex-col w-[110px] justify-around h-[200px] ">
+        <div className="flex flex-col w-[110px] justify-around h-full ">
           <div className=" flex flex-col justify-center items-center  h-[100px]">
             <p className="text-[#355FF5] text-[20px] font-medium">202</p>
             <p className="text-[#364A63] text-[10px]">Charge Session</p>
@@ -195,9 +195,9 @@ const TotalCharge = () => {
           </div>
         </div>
 
-        <div className="w-[1px] bg-[#C8D8F4] h-[110px]" />
+        <div className="w-[1px] bg-[#C8D8F4] h-[200px]" />
 
-        <div className="w-[75%] h-full flex items-end ">
+        <div className="w-[280px] ">
           {currentComponent === "All Station" && (
             <Line
               data={dataAllStation}
