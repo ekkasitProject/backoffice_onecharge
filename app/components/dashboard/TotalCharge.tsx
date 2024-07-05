@@ -53,13 +53,45 @@ const TotalCharge = () => {
   };
 
   const dataACCharge = {
-    // Define data for AC Charge
-    // Example data structure
+    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    datasets: [
+      {
+        data: [40000, 23000, 15000, 43000, 25000, 23000, 30000],
+        backgroundColor: "blue",
+        borderColor: "blue",
+        borderWidth: 3,
+        fill: false,
+      },
+      {
+        data: [12000, 15000, 33000, 23000, 35000, 30000, 40000],
+        backgroundColor: "#CCDAF6",
+        borderColor: "#CCDAF6",
+        borderWidth: 3,
+        borderDash: [10, 6],
+        fill: false,
+      },
+    ],
   };
 
   const dataDCCharge = {
-    // Define data for DC Charge
-    // Example data structure
+    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    datasets: [
+      {
+        data: [20000, 23000, 15000, 43000, 25000, 23000, 30000],
+        backgroundColor: "blue",
+        borderColor: "blue",
+        borderWidth: 3,
+        fill: false,
+      },
+      {
+        data: [13000, 15000, 33000, 23000, 35000, 30000, 40000],
+        backgroundColor: "#CCDAF6",
+        borderColor: "#CCDAF6",
+        borderWidth: 3,
+        borderDash: [10, 6],
+        fill: false,
+      },
+    ],
   };
 
   const options = {
@@ -101,7 +133,7 @@ const TotalCharge = () => {
   };
 
   return (
-    <div className="w-[700px] h-[300px] bg-white px-4 py-2 rounded-md">
+    <div className="w-[530px]  bg-white px-4 py-2 rounded-md">
       <div>
         <span className="text-[#364A63] text-[13px] mr-2 font-medium">
           Total Charge Session
@@ -142,33 +174,51 @@ const TotalCharge = () => {
 
       <div className="w-full bg-[#C8D8F4] h-[1px]" />
       <div className="flex h-[200px] justify-between items-center">
-        <div className="flex flex-col w-[200px] justify-around h-full ">
-          <div className="flex flex-col justify-center items-center  h-[150px]">
+        <div className="flex flex-col w-[150px] justify-around h-full ">
+          <div className=" flex flex-col justify-center items-center  h-[150px]">
             <p className="text-[#355FF5] text-[20px] font-medium">202</p>
             <p className="text-[#364A63] text-[10px]">Charge Session</p>
           </div>
-          <div className="flex justify-around items-center w-full">
-          <div className="flex justify-between items-center w-[80px]">
+          <div className="flex justify-around  items-center w-full">
+          <div className="flex  items-center w-[80px]">
           <div className="w-[15px] h-[5px] bg-[#355FF5]" />
-              <p className="text-[10px] text-[#8C8C8C] font-light">Total Charge</p>
+              <p className="text-[7px] text-[#8C8C8C] pl-1 font-light">Total Charge</p>
             </div>
-            <div className="flex justify-between items-center w-[90px]">
+            <div className="flex  items-center w-[100px]">
               <div className="flex">
                 <div className="w-[5px] h-[5px] mx-[0.5px] bg-[#CCDAF6]" />
                 <div className="w-[5px] h-[5px] mx-[0.5px] bg-[#CCDAF6]" />
                 <div className="w-[5px] h-[5px] mx-[0.5px] bg-[#CCDAF6]" />
               </div>
-              <p className="text-[8px] text-[#8C8C8C]">AVG. for the period</p>
+              <p className="text-[7px] text-[#8C8C8C] pl-1">AVG. for the period</p>
             </div>
           </div>
         </div>
 
         <div className="w-[1px] bg-[#C8D8F4] h-[200px]" />
 
-        <div className="w-[440px] h-[150px] ">
+        <div className="w-[350px] ">
           {currentComponent === "All Station" && (
             <Line
               data={dataAllStation}
+              options={options}
+              width={400}
+              height={150}
+            />
+          )}
+
+          {currentComponent === "AC Charge" && (
+            <Line
+              data={dataACCharge}
+              options={options}
+              width={400}
+              height={150}
+            />
+          )}
+
+          {currentComponent === "DC Charge" && (
+            <Line
+              data={dataDCCharge}
               options={options}
               width={400}
               height={150}

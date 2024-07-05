@@ -6,6 +6,9 @@ import ViewStaionMap from "../components/dashboard/ViewStaionMap";
 import Connectors from "../components/dashboard/Connectors";
 import Transactions from "../components/dashboard/Transaction";
 import Revenue from "../components/dashboard/Revenue";
+import RevenueStation from "../components/dashboard/RevenueStation";
+import StationList from "../components/dashboard/StationList";
+import RealtimeMonitor from "../components/dashboard/RealtimeMonitor";
 
 export default function Dashboard() {
   return (
@@ -23,9 +26,22 @@ export default function Dashboard() {
         <TotalCharge />
         <ViewStaionMap />
       </div>
-
-      <div className=" h-[600px] bg-white m-4 rounded-md"></div>
-      <div className=" h-[300px] bg-white m-4 rounded-md"></div>
+      <div className="flex justify-between h-[600px] m-4 rounded-md">
+        <div className="flex flex-col w-[40%] h-full">
+        <RevenueStation />
+        <RealtimeMonitor />
+        </div>
+        <div className="w-[58%] h-[650px]">
+          <div>
+          <StationList />
+          <div className="flex w-full justify-between h-[255px]  mt-4 rounded-md">
+              <div className="w-[48%] h-full bg-white rounded-md"></div>
+              <div className="w-[48%] h-full bg-white rounded-md"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div className=" h-[400px] bg-white m-4 rounded-md"></div>
     </div>
   );
 }

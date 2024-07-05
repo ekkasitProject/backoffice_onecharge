@@ -27,8 +27,8 @@ export default function RootLayout({
         <div className="flex-grow overflow-auto pt-16  bg-gray-100">
         <Navbar/>
         {children}
-          </div>
         <Footer/>
+          </div>
         </div>
           </body>
     </html>
