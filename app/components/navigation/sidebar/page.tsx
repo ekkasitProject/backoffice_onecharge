@@ -7,7 +7,7 @@ export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="w-[230px] h-screen bg-white z-20 left-0 top-0">
+    <div className="w-[280px] h-screen bg-white z-20 left-0 top-0">
       <div>
           <Link href="/" className="cursor-pointer">
             <img src="images/logo_onecharge.png" className="p-5" />
