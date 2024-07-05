@@ -26,12 +26,12 @@ export default function Dashboard() {
         <TotalCharge />
         <ViewStaionMap />
       </div>
-      <div className="flex justify-between h-[600px] m-4 rounded-md">
-        <div className="flex flex-col w-[40%] h-full">
+      <div className="flex justify-between h-[700px] m-4 rounded-md">
+        <div className="flex flex-col w-[40%]">
         <RevenueStation />
         <RealtimeMonitor />
         </div>
-        <div className="w-[58%] h-[650px]">
+        <div className="w-[58%] ">
           <div>
           <StationList />
           <div className="flex w-full justify-between h-[255px]  mt-4 rounded-md">
