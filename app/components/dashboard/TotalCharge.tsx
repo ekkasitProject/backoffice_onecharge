@@ -135,19 +135,19 @@ const TotalCharge = () => {
       <div className="w-full bg-[#C8D8F4] h-[1px]" />
       <div className="flex justify-between items-center">
         <div className="flex">
-          <div className="flex flex-col justify-around items-center w-[130px] h-[120px]">
+          <div className="flex flex-col justify-around items-center w-[100px] h-[120px]">
             <div className="flex flex-col justify-around items-center w-full">
               <p className="text-[#355FF5] text-[20px] font-medium">202</p>
               <p className="text-[#364A63] text-[10px]">Charge Session</p>
             </div>
             <div className="flex justify-around items-center w-full">
-              <div className="flex items-center justify-center w-[80px]">
+              <div className="flex flex-col items-center justify-center w-[90px]">
                 <div className="w-[15px] h-[5px] bg-[#355FF5]" />
                 <p className="text-[6px] text-[#8C8C8C] pl-1 font-light">
                   Total Charge
                 </p>
               </div>
-              <div className="flex items-center w-[100px]">
+              <div className="flex flex-col justify-center items-center w-[110px]">
                 <div className="flex">
                   {[...Array(3)].map((_, i) => (
                     <div
