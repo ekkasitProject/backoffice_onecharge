@@ -35,8 +35,10 @@ export default function Dashboard() {
           <div>
           <StationList />
           <div className="flex w-full justify-between h-[255px]  mt-4 rounded-md">
-              <div className="w-[48%] h-full bg-white rounded-md"></div>
-              <div className="w-[48%] h-full bg-white rounded-md"></div>
+              <div className="w-[48%] h-full bg-red-200 rounded-md">
+
+              </div>
+              <div className="w-[48%] h-full bg-green-200 rounded-md"></div>
           </div>
           </div>
         </div>
