@@ -133,7 +133,7 @@ const TotalCharge = () => {
   };
 
   return (
-    <div className="w-[450px]  bg-white px-4 py-2 rounded-md">
+    <div className="w-[500px]  bg-white px-4 py-2 rounded-md">
       <div>
         <span className="text-[#364A63] text-[13px] mr-2 font-medium">
           Total Charge Session
@@ -173,16 +173,18 @@ const TotalCharge = () => {
       </div>
 
       <div className="w-full bg-[#C8D8F4] h-[1px]" />
-      <div className="flex justify-between items-center">
-        <div className="flex flex-col w-full justify-around h-full ">
-        <div className=" flex flex-col justify-center items-center  h-[100px]">
-            <p className="text-[#355FF5] text-[20px] font-medium">202</p>
-            <p className="text-[#364A63] text-[10px]">Charge Session</p>
-          </div>
+      <div className="flex   justify-between items-center">
+        <div className="flex">
+
+        <div className=" flex flex-col justify-around items-center  w-[110px]  h-[120px]">
+           <div className="flex flex-col justify-around  items-center w-full">
+           <p className="text-[#355FF5] text-[20px] font-medium">202</p>
+           <p className="text-[#364A63] text-[10px]">Charge Session</p>
+           </div>
           <div className="flex justify-around  items-center w-full">
           <div className="flex  items-center justify-center w-[80px]">
           <div className="w-[15px] h-[5px] bg-[#355FF5]" />
-              <p className="text-[5px] text-[#8C8C8C] pl-1 font-light">Total Charge</p>
+              <p className="text-[7px] text-[#8C8C8C] pl-1 font-light">Total Charge</p>
             </div>
             <div className="flex  items-center w-[100px]">
               <div className="flex">
@@ -190,16 +192,17 @@ const TotalCharge = () => {
                 <div className="w-[5px] h-[5px] mx-[0.5px] bg-[#CCDAF6]" />
                 <div className="w-[5px] h-[5px] mx-[0.5px] bg-[#CCDAF6]" />
               </div>
-              <p className="text-[5px] text-[#8C8C8C] pl-1">AVG. for the period</p>
+              <p className="text-[7px] text-[#8C8C8C] pl-1">AVG. for the period</p>
             </div>
           </div>
 
+          </div>
 
         </div>
-        <div className="w-[1px] bg-[#C8D8F4] h-[200px]" />
+        <div className="w-[1px] bg-[#C8D8F4] mx-2 h-[200px]" />
 
 
-        <div className="w-full h-full ">
+        <div className="w-[340px] ">
           {currentComponent === "All Station" && (
             <Line
               data={dataAllStation}
@@ -225,9 +228,9 @@ const TotalCharge = () => {
               width={400}
               height={150}
             />
-          )}
+          )}        </div>
+
         </div>
-      </div>
     </div>
   );
 };
