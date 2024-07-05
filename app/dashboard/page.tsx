@@ -9,6 +9,7 @@ import Revenue from "../components/dashboard/Revenue";
 import RevenueStation from "../components/dashboard/RevenueStation";
 import StationList from "../components/dashboard/StationList";
 import RealtimeMonitor from "../components/dashboard/RealtimeMonitor";
+import ChargingTrend from "../components/dashboard/ChargingTrend";
 
 export default function Dashboard() {
   return (
@@ -27,17 +28,16 @@ export default function Dashboard() {
         <ViewStaionMap />
       </div>
       <div className="flex justify-between h-[700px] m-4 rounded-md">
-        <div className="flex flex-col w-[40%]">
+        <div className="flex flex-col w-[35%]">
         <RevenueStation />
         <RealtimeMonitor />
         </div>
-        <div className="w-[58%] ">
+        <div className="w-[63%] ">
           <div>
           <StationList />
           <div className="flex w-full justify-between h-[255px]  mt-4 rounded-md">
-              <div className="w-[48%] h-full bg-red-200 rounded-md">
-
-              </div>
+                  <ChargingTrend />
+              
               <div className="w-[48%] h-full bg-green-200 rounded-md"></div>
           </div>
           </div>
