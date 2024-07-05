@@ -133,7 +133,7 @@ const TotalCharge = () => {
   };
 
   return (
-    <div className="w-[480px]  bg-white px-4 py-2 rounded-md">
+    <div className="w-[450px]  bg-white px-4 py-2 rounded-md">
       <div>
         <span className="text-[#364A63] text-[13px] mr-2 font-medium">
           Total Charge Session
