@@ -133,7 +133,7 @@ const TotalCharge = () => {
   };
 
   return (
-    <div className="w-[510px]  bg-white px-4 py-2 rounded-md">
+    <div className="w-[520px]  bg-white px-4 py-2 rounded-md">
       <div>
         <span className="text-[#364A63] text-[13px] mr-2 font-medium">
           Total Charge Session
@@ -176,7 +176,7 @@ const TotalCharge = () => {
       <div className="flex   justify-between items-center">
         <div className="flex">
 
-        <div className=" flex flex-col justify-around items-center  w-[120px]  h-[120px]">
+        <div className=" flex flex-col justify-around items-center  w-[130px]  h-[120px]">
            <div className="flex flex-col justify-around  items-center w-full">
            <p className="text-[#355FF5] text-[20px] font-medium">202</p>
            <p className="text-[#364A63] text-[10px]">Charge Session</p>
@@ -184,7 +184,7 @@ const TotalCharge = () => {
           <div className="flex justify-around  items-center w-full">
           <div className="flex  items-center justify-center w-[80px]">
           <div className="w-[15px] h-[5px] bg-[#355FF5]" />
-              <p className="text-[7px] text-[#8C8C8C] pl-1 font-light">Total Charge</p>
+              <p className="text-[6px] text-[#8C8C8C] pl-1 font-light">Total Charge</p>
             </div>
             <div className="flex  items-center w-[100px]">
               <div className="flex">
@@ -192,7 +192,7 @@ const TotalCharge = () => {
                 <div className="w-[5px] h-[5px] mx-[0.5px] bg-[#CCDAF6]" />
                 <div className="w-[5px] h-[5px] mx-[0.5px] bg-[#CCDAF6]" />
               </div>
-              <p className="text-[7px] text-[#8C8C8C] pl-1">AVG. for the period</p>
+              <p className="text-[6px] text-[#8C8C8C] pl-1">AVG. for the period</p>
             </div>
           </div>
 
