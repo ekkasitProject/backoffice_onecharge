@@ -174,13 +174,13 @@ const TotalCharge = () => {
 
       <div className="w-full bg-[#C8D8F4] h-[1px]" />
       <div className="flex justify-between items-center">
-        <div className="flex flex-col w-[110px] justify-around h-full ">
-          <div className=" flex flex-col justify-center items-center  h-[100px]">
+        <div className="flex flex-col w-full justify-around h-full ">
+        <div className=" flex flex-col justify-center items-center  h-[100px]">
             <p className="text-[#355FF5] text-[20px] font-medium">202</p>
             <p className="text-[#364A63] text-[10px]">Charge Session</p>
           </div>
           <div className="flex justify-around  items-center w-full">
-          <div className="flex  items-center w-[80px]">
+          <div className="flex  items-center justify-center w-[80px]">
           <div className="w-[15px] h-[5px] bg-[#355FF5]" />
               <p className="text-[5px] text-[#8C8C8C] pl-1 font-light">Total Charge</p>
             </div>
@@ -193,11 +193,13 @@ const TotalCharge = () => {
               <p className="text-[5px] text-[#8C8C8C] pl-1">AVG. for the period</p>
             </div>
           </div>
-        </div>
 
+
+        </div>
         <div className="w-[1px] bg-[#C8D8F4] h-[200px]" />
 
-        <div className="w-[280px] ">
+
+        <div className="w-full h-full ">
           {currentComponent === "All Station" && (
             <Line
               data={dataAllStation}
