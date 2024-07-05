@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className='w-[930px] flex fixed   bottom-0  justify-between items-center h-[50px] p-2 bg-white'>
+    <footer className='w-[84%] flex fixed   bottom-0  justify-between items-center h-[50px] p-2 bg-white'>
         <div className=''>
         <h2 className='text-center text-[#8094AE] font-normal text-[14px]'>© 2024 OneCharge Co., Ltd.</h2>
 
