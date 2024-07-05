@@ -10,6 +10,7 @@ import RevenueStation from "../components/dashboard/RevenueStation";
 import StationList from "../components/dashboard/StationList";
 import RealtimeMonitor from "../components/dashboard/RealtimeMonitor";
 import ChargingTrend from "../components/dashboard/ChargingTrend";
+import TimeUtilization from "../components/dashboard/TimeUtilization";
 
 export default function Dashboard() {
   return (
@@ -29,17 +30,16 @@ export default function Dashboard() {
       </div>
       <div className="flex justify-between h-[700px] m-4 rounded-md">
         <div className="flex flex-col w-[35%]">
-        <RevenueStation />
-        <RealtimeMonitor />
+          <RevenueStation />
+          <RealtimeMonitor />
         </div>
         <div className="w-[63%] ">
           <div>
-          <StationList />
-          <div className="flex w-full justify-between h-[255px]  mt-4 rounded-md">
-                  <ChargingTrend />
-              
-              <div className="w-[48%] h-full bg-green-200 rounded-md"></div>
-          </div>
+            <StationList />
+            <div className="flex w-full justify-between h-[255px]  mt-4 rounded-md">
+              <ChargingTrend />
+              <TimeUtilization />
+            </div>
           </div>
         </div>
       </div>

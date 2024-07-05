@@ -49,12 +49,24 @@ const options = {
       max: 120,
       ticks: {
         stepSize: 20,
+        color: '#4B465C',
+        font: {
+          size: 10
+        }
       },
       grid: {
         display: false,
       },
     },
     x: {
+      beginAtZero: true,
+      display: true,
+      ticks: {
+        color: '#4B465C',
+        font: {
+          size: 10
+        }
+      },
       grid: {
         display: false,
       },
@@ -83,9 +95,10 @@ function ChargingTrend() {
         </div>
       </div>
       
-      <div className='flex-grow' style={{ width: '100%', minHeight: '100px' }}>
+      <div className='flex-grow' style={{ width: '100%', minHeight: '120px' }}>
         <Line options={options} data={data} />
       </div>
+
     </div>
   );
 }
