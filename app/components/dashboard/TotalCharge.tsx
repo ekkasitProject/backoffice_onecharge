@@ -133,7 +133,7 @@ const TotalCharge = () => {
   };
 
   return (
-    <div className="w-[60%]  bg-white px-4 py-2 rounded-md h-[220px]">
+    <div className="w-[60%]  bg-white px-4 py-2 rounded-md ">
       <div>
         <span className="text-[#364A63] text-[13px] mr-2 font-medium">
           Total Charge Session
@@ -197,7 +197,7 @@ const TotalCharge = () => {
 
         <div className="w-[1px] bg-[#C8D8F4] h-[110px]" />
 
-        <div className="w-[280px] ">
+        <div className="w-full ">
           {currentComponent === "All Station" && (
             <Line
               data={dataAllStation}
