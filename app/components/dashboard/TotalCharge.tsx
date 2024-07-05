@@ -176,7 +176,7 @@ const TotalCharge = () => {
       <div className="flex   justify-between items-center">
         <div className="flex">
 
-        <div className=" flex flex-col justify-around items-center  w-[110px]  h-[120px]">
+        <div className=" flex flex-col justify-around items-center  w-[120px]  h-[120px]">
            <div className="flex flex-col justify-around  items-center w-full">
            <p className="text-[#355FF5] text-[20px] font-medium">202</p>
            <p className="text-[#364A63] text-[10px]">Charge Session</p>
@@ -202,7 +202,7 @@ const TotalCharge = () => {
         <div className="w-[1px] bg-[#C8D8F4] mx-2 h-[200px]" />
 
 
-        <div className="w-[340px] ">
+        <div className="w-[370px] ">
           {currentComponent === "All Station" && (
             <Line
               data={dataAllStation}
