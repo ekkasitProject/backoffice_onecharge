@@ -75,7 +75,7 @@ export default function Sidebar() {
             <img
               src={`${
                 pathname === "/announcement"
-                  ? "images/icon_maintenance.png"
+                  ? "images/icon_announcement_active.png"
                   : "images/icon_announcement.png"
               }`}
               alt=""
@@ -101,7 +101,7 @@ export default function Sidebar() {
             <img
               src={`${
                 pathname === "/maintenance"
-                  ? "images/icon_maintenance.png"
+                  ? "images/icon_maintenance_active.png"
                   : "images/icon_maintenance.png"
               }`}
               alt=""
@@ -130,13 +130,17 @@ export default function Sidebar() {
           >
             <div className="flex justify-start items-center">
               <img
-                src="images/icon_statistics.png"
+                src={`${
+                  pathname === "/station-statistics" || pathname === "/device-statistics"
+                    ? "images/icon_statistics_active.png"
+                    : "images/icon_statistics.png"
+                }`}
                 alt="Statistics Icon"
                 className="w-[12px] mr-2"
               />
               <h1
                 className={`text-[10px] ${
-                  pathname === "/statistics"
+                  pathname === "/station-statistics" || pathname === "/device-statistics"
                     ? "text-[#355FF5]"
                     : "text-[#6E82A5]"
                 } font-semibold`}
@@ -157,24 +161,24 @@ export default function Sidebar() {
               isOpen === true ? "max-h-40" : "max-h-0"
             }`}
           >
-            <div className="w-full pl-7">
+            <div className="w-full ">
               <Link href="/station-statistics">
                 <p
-                  className={`text-[8px] mx-2 my-1 px-2 py-1 font-light cursor-pointer ${
+                  className={`text-[8px] mx-2 my-1 px-7 py-1 rounded-lg cursor-pointer ${
                     pathname === "/station-statistics"
-                      ? "text-[#355FF5] bg-[#EFF2FC]"
-                      : "text-[#6E82A5]"
+                      ? "text-[#355FF5] bg-[#EFF2FC] font-medium"
+                      : "text-[#6E82A5] font-light"
                   }`}
                 >
                   Station Statistics
                 </p>
               </Link>
               <Link href="/device-statistics">
-                <p
-                  className={`text-[8px] mx-2 my-1 px-2 py-1 font-light cursor-pointer ${
+              <p
+                  className={`text-[8px] mx-2 my-1 px-7 py-1 rounded-lg cursor-pointer ${
                     pathname === "/device-statistics"
-                      ? "text-[#355FF5] bg-[#EFF2FC]"
-                      : "text-[#6E82A5]"
+                      ? "text-[#355FF5] bg-[#EFF2FC] font-medium"
+                      : "text-[#6E82A5] font-light"
                   }`}
                 >
                   Device Statistics
