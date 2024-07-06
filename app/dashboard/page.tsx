@@ -36,7 +36,7 @@ export default function Dashboard() {
         <div className="w-[63%] ">
           <div>
             <StationList />
-            <div className="flex w-full justify-between h-[255px]  mt-4 rounded-md">
+            <div className="flex w-full justify-between  h-[255px]  mt-4 rounded-md">
               <ChargingTrend />
               <TimeUtilization />
             </div>
