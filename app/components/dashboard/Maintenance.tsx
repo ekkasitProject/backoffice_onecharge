@@ -32,7 +32,7 @@ export default function Maintenance() {
         {boxes.map((box) => (
           <div
             key={box.id}
-            className={`w-[245px] h-[210px] p-4 bg-white shadow-lg rounded-md ${
+            className={`w-[245px] h-[210px] p-4  shadow-lg rounded-md ${
               selectedBox === box.id ? "bg-[#1055E8]" : "bg-white"
             }`}
             onClick={() => handleBoxClick(box.id)}
