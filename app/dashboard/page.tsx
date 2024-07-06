@@ -11,6 +11,7 @@ import StationList from "../components/dashboard/StationList";
 import RealtimeMonitor from "../components/dashboard/RealtimeMonitor";
 import ChargingTrend from "../components/dashboard/ChargingTrend";
 import TimeUtilization from "../components/dashboard/TimeUtilization";
+import Maintenance from "../components/dashboard/Maintenance";
 
 export default function Dashboard() {
   return (
@@ -43,7 +44,8 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-      <div className=" h-[400px] bg-white m-4 rounded-md"></div>
+      <Maintenance />
+      <div className="h-[50px]"/>
     </div>
   );
 }
