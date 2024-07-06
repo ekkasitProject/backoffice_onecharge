@@ -70,7 +70,7 @@ const options = {
 
 function TimeUtilization() {
   return (
-    <div className='w-[245px] h-full bg-white rounded-md p-4 flex flex-col'>
+    <div className='w-[240px] h-full bg-white rounded-md p-4 flex flex-col'>
         <p className='text-[#364A63] text-[12px] font-medium'>Time Utilization</p>
       <div className='w-full h-[1px] bg-[#C8D8F4] my-2'/>
            

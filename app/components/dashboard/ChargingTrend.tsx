@@ -76,7 +76,7 @@ const options = {
 
 function ChargingTrend() {
   return (
-    <div className='w-[245px] h-full bg-white rounded-md p-4 flex flex-col'>
+    <div className='w-[240px] h-full bg-white rounded-md p-4 flex flex-col'>
       <div className='flex justify-between items-center'>
         <p className='text-[#364A63] text-[12px] font-medium'>Charging Trend</p>
         <p className='text-[#364A63] text-[10px] font-light'>48 hours ago</p>
