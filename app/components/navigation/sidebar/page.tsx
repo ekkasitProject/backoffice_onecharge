@@ -157,7 +157,7 @@ export default function Sidebar() {
               isOpen === true ? "max-h-40" : "max-h-0"
             }`}
           >
-            <div className="w-full pl-9">
+            <div className="w-full pl-7">
               <Link href="/station-statistics">
                 <p
                   className={`text-[8px] mx-2 my-1 px-2 py-1 font-light cursor-pointer ${
