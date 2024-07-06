@@ -42,15 +42,15 @@ export default function Sidebar() {
             </h1>
           </div>
         </Link>
-        <Link href="/monitor">
+        <Link href="/monitor-operation">
           <div
             className={`flex justify-start items-center ${
-              pathname === "/monitor" ? "bg-[#EFF2FC]" : ""
+              pathname === "/monitor-operation" ? "bg-[#EFF2FC]" : ""
             }  py-2 px-4 mx-2  rounded-lg`}
           >
             <img
               src={`${
-                pathname === "/monitor"
+                pathname === "/monitor-operation"
                   ? "images/icon_dashboard_active.png"
                   : "images/icon_dashboard.png"
               }`}
@@ -59,7 +59,7 @@ export default function Sidebar() {
             />
             <h1
               className={`text-[10px] ${
-                pathname === "/monitor" ? "text-[#355FF5]" : "text-[#6E82A5]"
+                pathname === "/monitor-operation" ? "text-[#355FF5]" : "text-[#6E82A5]"
               } font-semibold`}
             >
               Monitor Operation
