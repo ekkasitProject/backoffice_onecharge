@@ -85,7 +85,7 @@ export default function Operation() {
 
   return (
     <div className="w-full mt-4">
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-2">
         {data.map((item) => (
           <div
             key={item.id}
