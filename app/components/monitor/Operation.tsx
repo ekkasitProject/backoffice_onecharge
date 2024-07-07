@@ -1,3 +1,6 @@
+"use client";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const data = [
@@ -76,6 +79,10 @@ const data = [
 ];
 
 export default function Operation() {
+
+  const router = useRouter();
+
+
   return (
     <div className="w-full mt-4">
       <div className="grid grid-cols-3 gap-4">
@@ -167,7 +174,9 @@ export default function Operation() {
                 <div className="w-full h-[1px] bg-[#C8D8F4] my-2" />
                 <div className="w-full flex justify-between">
                   <div className="w-[50px] px-2 py-1 flex items-center justify-center rounded-md bg-[#EAF4FF]">
-                    <p className="text-[#355FF5] text-[7px]">View</p>
+                    
+                    <button className="w-[15px] h-[10px] ml-1" onClick={() => router.push(`/monitor-operation/view`)}>                    <p className="text-[#355FF5] text-[7px]">View</p>
+                    </button>
                   </div>
                  {item.overheat ? (
                     <div className="w-[60px] px-2 py-1 flex items-center justify-center rounded-md">

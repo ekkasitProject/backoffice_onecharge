@@ -1,7 +1,8 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -15,7 +16,7 @@ export default function Sidebar() {
     <div className="w-[250px] h-screen bg-white z-20 left-0 top-0">
       <div>
         <Link href="/" className="cursor-pointer">
-          <img src="images/logo_onecharge.png" className="p-5" />
+          <Image src="/images/logo_onecharge.png" className="mx-auto p-5" width={140} height={40} alt="logo"/>
         </Link>
 
         <Link href="/">
@@ -24,15 +25,18 @@ export default function Sidebar() {
               pathname === "/" ? "bg-[#EFF2FC]" : ""
             }  py-2 px-4 mx-2 mt-4 rounded-lg`}
           >
-            <img
-              src={`${
+            <Image
+              src={`/images/${
                 pathname === "/"
-                  ? "images/icon_dashboard_active.png"
-                  : "images/icon_dashboard.png"
+                  ? "icon_dashboard_active.png"
+                  : "icon_dashboard.png"
               }`}
-              alt=""
-              className="w-[12px] mr-2"
+              width={12}
+              height={12}
+              alt="Icon Dashboard"
+              className="mr-2"
             />
+
             <h1
               className={`text-[10px] ${
                 pathname === "/" ? "text-[#355FF5]" : "text-[#6E82A5]"
@@ -45,21 +49,27 @@ export default function Sidebar() {
         <Link href="/monitor-operation">
           <div
             className={`flex justify-start items-center ${
-              pathname === "/monitor-operation" ? "bg-[#EFF2FC]" : ""
+              pathname === "/monitor-operation"  || pathname === "/monitor-operation/view"
+              ? "bg-[#EFF2FC]" : ""
             }  py-2 px-4 mx-2  rounded-lg`}
           >
-            <img
-              src={`${
-                pathname === "/monitor-operation"
-                  ? "images/icon_dashboard_active.png"
-                  : "images/icon_dashboard.png"
+            <Image
+              src={`/images/${
+                pathname === "/monitor-operation" || pathname === "/monitor-operation/view"
+                  ? "icon_dashboard_active.png"
+                  : "icon_dashboard.png"
               }`}
-              alt=""
-              className="w-[12px] mr-2"
+              width={12}
+              height={12}
+              alt="Icon Monitor"
+              className="mr-2"
             />
+
             <h1
               className={`text-[10px] ${
-                pathname === "/monitor-operation" ? "text-[#355FF5]" : "text-[#6E82A5]"
+                pathname === "/monitor-operation" || pathname === "/monitor-operation/view"
+                  ? "text-[#355FF5]"
+                  : "text-[#6E82A5]"
               } font-semibold`}
             >
               Monitor Operation
@@ -72,15 +82,18 @@ export default function Sidebar() {
               pathname === "/announcement" ? "bg-[#EFF2FC]" : ""
             }  py-2 px-4 mx-2  rounded-lg`}
           >
-            <img
-              src={`${
+            <Image
+              src={`/images/${
                 pathname === "/announcement"
-                  ? "images/icon_announcement_active.png"
-                  : "images/icon_announcement.png"
+                  ? "icon_announcement_active.png"
+                  : "icon_announcement.png"
               }`}
-              alt=""
-              className="w-[12px] mr-2"
+              width={12}
+              height={12}
+              alt="Announcement Icon"
+              className="mr-2"
             />
+
             <h1
               className={`text-[10px] ${
                 pathname === "/announcement"
@@ -98,15 +111,18 @@ export default function Sidebar() {
               pathname === "/maintenance" ? "bg-[#EFF2FC]" : ""
             }  py-2 px-4 mx-2  rounded-lg`}
           >
-            <img
-              src={`${
+            <Image
+              src={`/images/${
                 pathname === "/maintenance"
-                  ? "images/icon_maintenance_active.png"
-                  : "images/icon_maintenance.png"
+                  ? "icon_maintenance_active.png"
+                  : "icon_maintenance.png"
               }`}
-              alt=""
-              className="w-[12px] mr-2"
+              width={12}
+              height={12}
+              alt="Maintenance Icon"
+              className="mr-2"
             />
+
             <h1
               className={`text-[10px] ${
                 pathname === "/maintenance"
@@ -129,18 +145,23 @@ export default function Sidebar() {
             onClick={handleToggle}
           >
             <div className="flex justify-start items-center">
-              <img
-                src={`${
-                  pathname === "/station-statistics" || pathname === "/device-statistics"
-                    ? "images/icon_statistics_active.png"
-                    : "images/icon_statistics.png"
+              <Image
+                src={`/images/${
+                  pathname === "/station-statistics" ||
+                  pathname === "/device-statistics"
+                    ? "icon_statistics_active.png"
+                    : "icon_statistics.png"
                 }`}
-                alt="Statistics Icon"
-                className="w-[12px] mr-2"
+                width={12}
+                height={12}
+                alt="Icon Statistics"
+                className="mr-2"
               />
+
               <h1
                 className={`text-[10px] ${
-                  pathname === "/station-statistics" || pathname === "/device-statistics"
+                  pathname === "/station-statistics" ||
+                  pathname === "/device-statistics"
                     ? "text-[#355FF5]"
                     : "text-[#6E82A5]"
                 } font-semibold`}
@@ -148,12 +169,11 @@ export default function Sidebar() {
                 Statistics
               </h1>
             </div>
-            <img
-              src="images/icon_arrow_up.png"
-              alt="Arrow Icon"
-              className={`w-[15px] h-[15px] ml-2 transition-transform duration-300 ${
-                isOpen ? "transform rotate-180" : ""
-              }`}
+            <Image
+              src={`/images/icon_arrow_up.png`}
+              width={12}
+              height={12}
+              alt="statistics arrow"
             />
           </div>
           <div
@@ -174,7 +194,7 @@ export default function Sidebar() {
                 </p>
               </Link>
               <Link href="/device-statistics">
-              <p
+                <p
                   className={`text-[8px] mx-2 my-1 px-7 py-1 rounded-lg cursor-pointer ${
                     pathname === "/device-statistics"
                       ? "text-[#355FF5] bg-[#EFF2FC] font-medium"
@@ -194,15 +214,18 @@ export default function Sidebar() {
             pathname === "/operation-log" ? "bg-[#EFF2FC]" : ""
           }  py-2 px-4 mx-2  rounded-lg`}
         >
-          <img
-            src={`${
+          <Image
+            src={`/images/${
               pathname === "/operation-log"
-                ? "images/icon_operation_log.png"
-                : "images/icon_operation_log.png"
+                ? "icon_operation_log_active.png"
+                : "icon_operation_log.png"
             }`}
-            alt=""
-            className="w-[10px]  mr-2"
+            width={12}
+            height={12}
+            alt="Operation Log Icon"
+            className="mr-2"
           />
+
           <h1
             className={`text-[10px] ${
               pathname === "/operation-log"

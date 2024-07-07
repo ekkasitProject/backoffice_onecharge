@@ -4,7 +4,7 @@ import { IoSearchSharp } from "react-icons/io5";
 
 const FilterButton = ({ label }: { label: string }) => {
   return (
-    <div className="w-[90px] flex justify-center items-center bg-[#ECF2F8] px-3 py-1 border-[1px] border-[#D9D8DF] rounded-md">
+    <div className="w-[85px] flex justify-center items-center bg-[#ECF2F8] px-3 py-1 border-[1px] border-[#D9D8DF] rounded-md">
       <p className="text-[#A1B1D1] text-[7px] font-light ">{label}</p>
       <MdKeyboardArrowDown className="text-[#A1B1D1] text-[7px] font-light " />
     </div>
@@ -14,7 +14,7 @@ const FilterButton = ({ label }: { label: string }) => {
 
 export default function Monitor() {
   return (
-    <div className="w-[210px] h-[400px] fixed bg-white rounded-md p-3">
+    <div className="w-[200px] h-[400px] fixed bg-white rounded-md p-3">
       <p className="text-[#364A63] text-[12px] font-medium ">Monitor</p>
       <div className="w-full h-[1px] bg-[#E0E0E0]  my-2" />
       <div className="w-full flex justify-between items-center bg-[#ECF2F8] px-2 py-1  border-[1px] border-[#D9D8DF] rounded-md ">
