@@ -20,10 +20,9 @@ export default function Sidebar() {
           <div className="w-full h-[60px] flex justify-center items-center">
             <Image
               src={`/images/logo_onecharge.png`}
-              width={120}
-              height={20}
+              width={110}
+              height={17.61}
               alt="Icon Monitor"
-              className="mr-2"
             />
           </div>
         </Link>
@@ -41,7 +40,7 @@ export default function Sidebar() {
                   : "icon_dashboard.png"
               }`}
               width={15}
-              height={15}
+              height={15.47}
               alt="Icon Dashboard"
               className="mr-2"
             />
@@ -72,7 +71,7 @@ export default function Sidebar() {
                   : "icon_dashboard.png"
               }`}
               width={15}
-              height={15}
+              height={15.47}
               alt="Icon Monitor"
               className="mr-2"
             />
@@ -102,7 +101,7 @@ export default function Sidebar() {
                   : "icon_announcement.png"
               }`}
               width={15}
-              height={15}
+              height={15.47}
               alt="Announcement Icon"
               className="mr-2"
             />
@@ -131,7 +130,7 @@ export default function Sidebar() {
                   : "icon_maintenance.png"
               }`}
               width={15}
-              height={15}
+              height={15.94}
               alt="Maintenance Icon"
               className="mr-2"
             />
@@ -234,7 +233,7 @@ export default function Sidebar() {
                 : "icon_operation_log.png"
             }`}
             width={12}
-            height={15}
+            height={17.25}
             alt="Operation Log Icon"
             className="mr-2"
           />

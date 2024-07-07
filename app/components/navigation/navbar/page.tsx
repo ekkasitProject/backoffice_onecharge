@@ -33,7 +33,7 @@ export default function Navbar() {
               <Image
                 src={`/images/icon_arrow_down.png`}
                 width={10}
-                height={10}
+                height={13.5}
                 alt="menu"
               />
             </div>
@@ -43,7 +43,7 @@ export default function Navbar() {
           <Image
             src={`/images/icon_notification.png`}
             width={17}
-            height={17}
+            height={18.06}
             alt="menu"
           />
         </div>
