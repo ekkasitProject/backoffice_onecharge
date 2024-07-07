@@ -14,7 +14,7 @@ const FilterButton = ({ label }: { label: string }) => {
 
 export default function Monitor() {
   return (
-    <div className="w-[210px] h-[500px] fixed bg-white rounded-md p-3">
+    <div className="w-[210px] h-[400px] fixed bg-white rounded-md p-3">
       <p className="text-[#364A63] text-[12px] font-medium ">Monitor</p>
       <div className="w-full h-[1px] bg-[#E0E0E0]  my-2" />
       <div className="w-full flex justify-between items-center bg-[#ECF2F8] px-2 py-1  border-[1px] border-[#D9D8DF] rounded-md ">

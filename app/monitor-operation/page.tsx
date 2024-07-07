@@ -25,7 +25,9 @@ export default function page() {
           </div>
         </div>
         <Operation />
+        <div className="h-[75px]"/>
       </div>
+      
     </div>
   );
 }
