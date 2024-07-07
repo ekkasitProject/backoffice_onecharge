@@ -85,7 +85,7 @@ export default function Operation() {
 
   return (
     <div className="w-full mt-4">
-      <div className="grid grid-cols-3 gap-2">
+      <div className="grid grid-cols-3 gap-4">
         {data.map((item) => (
           <div
             key={item.id}
@@ -175,7 +175,8 @@ export default function Operation() {
                 <div className="w-full flex justify-between">
                   <div className="w-[50px] px-2 py-1 flex items-center justify-center rounded-md bg-[#EAF4FF]">
                     
-                    <button className="w-[15px] h-[10px] ml-1" onClick={() => router.push(`/monitor-operation/view`)}>                    <p className="text-[#355FF5] text-[7px]">View</p>
+                    <button className="w-[15px] h-[10px]" onClick={() => router.push(`/monitor-operation/view`)}>    
+                                      <p className="text-[#355FF5] text-[7px]">View</p>
                     </button>
                   </div>
                  {item.overheat ? (
