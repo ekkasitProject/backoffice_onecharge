@@ -1,8 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 export default function Sidebar() {
   const pathname = usePathname();
@@ -12,14 +13,17 @@ export default function Sidebar() {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {}, []);
   return (
     <div className="w-[250px] h-screen bg-white z-20 left-0 top-0">
       <div>
         <Link href="/" className="cursor-pointer">
-          <div className="w-[180px] h-[60px] flex justify-center  items-center">
-    
-            <img src="/images/logo_onecharge.png" alt="" className="w-[110px]" />
+          <div className="w-full h-[60px] flex justify-center items-center">
+            <Image
+              src={`/images/logo_onecharge.png`}
+              width={120}
+              height={17.61}
+              alt="Icon Monitor"
+            />
           </div>
         </Link>
 
@@ -177,12 +181,13 @@ export default function Sidebar() {
                 Statistics
               </h1>
             </div>
-            <Image
-              src={`/images/icon_arrow_up.png`}
-              width={15}
-              height={15}
-              alt="statistics arrow"
-            />
+            {isOpen ? (
+        <IoIosArrowUp className="text-[#6E82A5] text-[8px]  " />
+
+            ) : (
+              <IoIosArrowDown className="text-[#6E82A5] text-[8px]  " />
+
+            )}
           </div>
           <div
             className={`overflow-hidden transition-max-height duration-300 ease-in-out ${

@@ -6,7 +6,7 @@ export default function page() {
   return (
     <div className="flex justify-between mx-4">
       <Monitor />
-      <div className="w-[590px] h-[600px]  ml-[200px] mb-[70px]">
+      <div className="w-[570px] h-[600px]  ml-[200px] mb-[70px]">
         <div className="w-full flex justify-between ">
           <div className="w-[190px] h-[70px] flex flex-col justify-center items-center bg-white rounded-md">
             <p className="text-[14px] font-semibold">321</p>
