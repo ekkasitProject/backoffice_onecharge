@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import OverView from "../components/dashboard/Overview";
 import Energy from "../components/dashboard/Enery";
 import TotalCharge from "../components/dashboard/TotalCharge";
@@ -14,22 +15,25 @@ import TimeUtilization from "../components/dashboard/TimeUtilization";
 import Maintenance from "../components/dashboard/Maintenance";
 
 export default function Dashboard() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div>
-      <div className=" h-[50px] bg-white m-4 rounded-md">
+    <div className="mx-4">
+      <div className=" h-[50px] bg-white  rounded-md">
         <OverView />
       </div>
-      <div className=" flex justify-between m-4">
+      <div className=" flex justify-between my-4">
         <Energy />
         <Connectors />
         <Transactions />
         <Revenue />
       </div>
-      <div className=" flex  justify-between m-4">
+      <div className=" flex  justify-between my-4">
         <TotalCharge />
         <ViewStaionMap />
       </div>
-      <div className="flex justify-between h-[700px] m-4 rounded-md">
+      <div className="flex justify-between h-[700px] my-4 rounded-md">
         <div className="flex flex-col w-[35%]">
           <RevenueStation />
           <RealtimeMonitor />

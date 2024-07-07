@@ -15,7 +15,7 @@ export default function Maintenance() {
   ];
 
   return (
-    <div className=" bg-white m-4 pt-3 px-3 pb-7 rounded-md shadow-md">
+    <div className=" bg-white my-4 pt-3 px-3 pb-7 rounded-md shadow-md">
       <div className="flex justify-between items-center w-full">
         <p className="text-[#364A63] text-[12px] font-medium">Maintenance</p>
         <div className="flex justify-between items-center">

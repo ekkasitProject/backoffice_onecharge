@@ -24,9 +24,11 @@ export default function RootLayout({
     <html lang="en" className={font.className}>
       <body className="flex"><Sidebar/>
       <div className="flex flex-col w-[1280px] h-screen ">
-        <div className="flex-grow overflow-auto pt-16  bg-gray-100">
+        <div className="flex-grow overflow-auto  bg-gray-100">
         <Navbar/>
+        <div className="mt-[80px]">
         {children}
+        </div>
         <Footer/>
           </div>
         </div>
