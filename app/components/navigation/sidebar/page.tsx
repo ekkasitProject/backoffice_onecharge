@@ -17,9 +17,9 @@ export default function Sidebar() {
     <div className="w-[250px] h-screen bg-white z-20 left-0 top-0">
       <div>
         <Link href="/" className="cursor-pointer">
-          <div className="w-full h-[60px] flex justify-center items-center">
-
-            <img src="/images/logo_onecharge.png" alt="" className="w-[140px]" />
+          <div className="w-[200px] h-[60px] flex justify-center  items-center">
+    
+            <img src="/images/logo_onecharge.png" alt="" className="w-[110px]" />
           </div>
         </Link>
 
