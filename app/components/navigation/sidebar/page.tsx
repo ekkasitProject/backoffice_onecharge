@@ -12,11 +12,20 @@ export default function Sidebar() {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {}, []);
   return (
     <div className="w-[250px] h-screen bg-white z-20 left-0 top-0">
       <div>
         <Link href="/" className="cursor-pointer">
-          <Image src="/images/logo_onecharge.png" className="mx-auto p-5" width={140} height={40} alt="logo"/>
+          <div className="w-full h-[60px] flex justify-center items-center">
+            <Image
+              src={`/images/logo_onecharge.png`}
+              width={120}
+              height={20}
+              alt="Icon Monitor"
+              className="mr-2"
+            />
+          </div>
         </Link>
 
         <Link href="/">
@@ -31,8 +40,8 @@ export default function Sidebar() {
                   ? "icon_dashboard_active.png"
                   : "icon_dashboard.png"
               }`}
-              width={12}
-              height={12}
+              width={15}
+              height={15}
               alt="Icon Dashboard"
               className="mr-2"
             />
@@ -49,25 +58,29 @@ export default function Sidebar() {
         <Link href="/monitor-operation">
           <div
             className={`flex justify-start items-center ${
-              pathname === "/monitor-operation"  || pathname === "/monitor-operation/view"
-              ? "bg-[#EFF2FC]" : ""
+              pathname === "/monitor-operation" ||
+              pathname === "/monitor-operation/view"
+                ? "bg-[#EFF2FC]"
+                : ""
             }  py-2 px-4 mx-2  rounded-lg`}
           >
             <Image
               src={`/images/${
-                pathname === "/monitor-operation" || pathname === "/monitor-operation/view"
+                pathname === "/monitor-operation" ||
+                pathname === "/monitor-operation/view"
                   ? "icon_dashboard_active.png"
                   : "icon_dashboard.png"
               }`}
-              width={12}
-              height={12}
+              width={15}
+              height={15}
               alt="Icon Monitor"
               className="mr-2"
             />
 
             <h1
               className={`text-[10px] ${
-                pathname === "/monitor-operation" || pathname === "/monitor-operation/view"
+                pathname === "/monitor-operation" ||
+                pathname === "/monitor-operation/view"
                   ? "text-[#355FF5]"
                   : "text-[#6E82A5]"
               } font-semibold`}
@@ -88,8 +101,8 @@ export default function Sidebar() {
                   ? "icon_announcement_active.png"
                   : "icon_announcement.png"
               }`}
-              width={12}
-              height={12}
+              width={15}
+              height={15}
               alt="Announcement Icon"
               className="mr-2"
             />
@@ -117,8 +130,8 @@ export default function Sidebar() {
                   ? "icon_maintenance_active.png"
                   : "icon_maintenance.png"
               }`}
-              width={12}
-              height={12}
+              width={15}
+              height={15}
               alt="Maintenance Icon"
               className="mr-2"
             />
@@ -152,8 +165,8 @@ export default function Sidebar() {
                     ? "icon_statistics_active.png"
                     : "icon_statistics.png"
                 }`}
-                width={12}
-                height={12}
+                width={15}
+                height={15}
                 alt="Icon Statistics"
                 className="mr-2"
               />
@@ -171,8 +184,8 @@ export default function Sidebar() {
             </div>
             <Image
               src={`/images/icon_arrow_up.png`}
-              width={12}
-              height={12}
+              width={15}
+              height={15}
               alt="statistics arrow"
             />
           </div>
@@ -221,7 +234,7 @@ export default function Sidebar() {
                 : "icon_operation_log.png"
             }`}
             width={12}
-            height={12}
+            height={15}
             alt="Operation Log Icon"
             className="mr-2"
           />
