@@ -33,22 +33,22 @@ export default function Dashboard() {
         <TotalCharge />
         <ViewStaionMap />
       </div>
-      <div className="flex justify-between h-[700px] my-4 rounded-md">
+      <div className="flex justify-between  my-4 rounded-md">
         <div className="flex flex-col w-[35%]">
           <RevenueStation />
-          <RealtimeMonitor />
+          {/* <RealtimeMonitor /> */}
         </div>
-        <div className="w-[63%] ">
+        <div className="w-[63%]  ">
           <div>
             <StationList />
-            <div className="flex w-full justify-between  h-[255px]  mt-4 rounded-md">
+            {/* <div className="flex w-full justify-between  h-[255px]  mt-4 rounded-md">
               <ChargingTrend />
               <TimeUtilization />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
-      <Maintenance />
+      {/* <Maintenance /> */}
       <div className="h-[50px]"/>
     </div>
   );

@@ -11,6 +11,8 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import { FiClock } from "react-icons/fi";
+import { IoIosArrowDown } from "react-icons/io";
 
 ChartJS.register(
   CategoryScale,
@@ -131,8 +133,20 @@ const TotalCharge = () => {
           </button>
         ))}
       </div>
-
-      <div className="w-full bg-[#C8D8F4] h-[1px]" />
+        <div className="w-full h-[1px] flex justify-between items-center">
+        <div className="w-[75%] bg-[#C8D8F4] h-[1px]" />
+        <div className="w-[120px] h-[30px] flex justify-between items-center px-3  py-1 bg-[#F5F6FA] rounded-md">
+              <div className="flex justify-center items-center">
+                <FiClock className="text-[#8A8A8A] text-[12px]" />
+                <p className="text-[10px] text-[#8A8A8A] font-light ml-1">
+                  7 days
+                </p>
+              </div>
+              <div className="p-[2px] bg-[#F0F0F0] rounded-full">
+                <IoIosArrowDown className="text-[#969696] text-[10px]" />
+              </div>
+            </div>
+        </div>
       <div className="flex justify-between items-center">
         <div className="flex">
           <div className="flex flex-col justify-around items-center w-[100px] h-[120px]">

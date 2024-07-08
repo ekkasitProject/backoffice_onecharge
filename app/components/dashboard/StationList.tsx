@@ -1,4 +1,5 @@
 import React from "react";
+import { IoIosArrowForward } from "react-icons/io";
 
 export default function StationList() {
   return (
@@ -152,10 +153,12 @@ export default function StationList() {
         </div>
       </div>
       <div className="w-full h-[1px] bg-[#C8D8F4]  my-2" />
-      <div className='flex justify-end items-center w-full'>
-      <p className='text-[#355FF5] text-[10px] font-medium'>View Station</p>
-      <img src="images/icon_arrow_right.png" className="w-[15px] h-[15px] ml-2" alt="" />
-        </div>    
+      <div className="flex justify-end items-center w-full">
+        <p className="text-[#355FF5] text-[10px] font-medium">View Station</p>
+        <div className="w-[15px] h-[15px] bg-[#F0F0F0] ml-2 rounded-full flex justify-center items-center">
+          <IoIosArrowForward className="text-[#969696] text-[10px]" />
+        </div>{" "}
+      </div>
     </div>
   );
 }

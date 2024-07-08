@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -54,15 +54,19 @@ export default function Sidebar() {
             </h1>
           </div>
         </Link>
-        <Link href="/team">
+        <Link href="/monitor-operation">
           <div
             className={`flex justify-start items-center ${
-              pathname === "/team" ? "bg-[#EFF2FC]" : ""
+              pathname === "/monitor-operation" ||
+              pathname === "/monitor-operation/view"
+                ? "bg-[#EFF2FC]"
+                : ""
             }  py-2 px-4 mx-2  rounded-lg`}
           >
             <Image
               src={`/images/${
-                pathname === "/team"
+                pathname === "/monitor-operation" ||
+                pathname === "/monitor-operation/view"
                   ? "icon_dashboard_active.png"
                   : "icon_dashboard.png"
               }`}
@@ -74,40 +78,75 @@ export default function Sidebar() {
 
             <h1
               className={`text-[10px] ${
-                pathname === "/team" ? "text-[#355FF5]" : "text-[#6E82A5]"
+                pathname === "/monitor-operation" ||
+                pathname === "/monitor-operation/view"
+                  ? "text-[#355FF5]"
+                  : "text-[#6E82A5]"
               } font-semibold`}
             >
-              Team
+              Monitor Operation
             </h1>
           </div>
         </Link>
-        <Link href="/transaction">
+        <Link href="/announcement">
           <div
             className={`flex justify-start items-center ${
-              pathname === "/transaction" ? "bg-[#EFF2FC]" : ""
+              pathname === "/announcement" ? "bg-[#EFF2FC]" : ""
             }  py-2 px-4 mx-2  rounded-lg`}
           >
             <Image
               src={`/images/${
-                pathname === "/transaction"
-                  ? "icon_transaction_active.png"
-                  : "icon_transaction.png"
+                pathname === "/announcement"
+                  ? "icon_announcement_active.png"
+                  : "icon_announcement.png"
               }`}
               width={15}
               height={15.47}
-              alt="transaction Icon"
+              alt="Announcement Icon"
               className="mr-2"
             />
 
             <h1
               className={`text-[10px] ${
-                pathname === "/transaction"
+                pathname === "/announcement"
                   ? "text-[#355FF5]"
                   : "text-[#6E82A5]"
               } font-semibold`}
             >
-              Transaction
+              Announcement
             </h1>
+          </div>
+        </Link>
+        <Link href="/maintenance">
+          <div
+            className={`flex justify-start items-center ${
+              pathname === "/maintenance" ? "bg-[#EFF2FC]" : ""
+            }  py-2 px-4 mx-2  rounded-lg`}
+          >
+            <Image
+              src={`/images/${
+                pathname === "/maintenance"
+                  ? "icon_maintenance_active.png"
+                  : "icon_maintenance.png"
+              }`}
+              width={15}
+              height={15.94}
+              alt="Maintenance Icon"
+              className="mr-2"
+            />
+
+            <h1
+              className={`text-[10px] ${
+                pathname === "/maintenance"
+                  ? "text-[#355FF5]"
+                  : "text-[#6E82A5]"
+              } font-semibold`}
+            >
+              Maintenance
+            </h1>
+            <div className="flex justify-center items-center w-[15px] h-[15px] bg-red-500 ml-2 rounded-full">
+              <p className="text-white text-[10px]">3</p>
+            </div>
           </div>
         </Link>
         <div>
@@ -120,10 +159,10 @@ export default function Sidebar() {
             <div className="flex justify-start items-center">
               <Image
                 src={`/images/${
-                  pathname === "/charging-stations" ||
-                  pathname === "/chargers"
-                    ? "icon_charging_station_active.png"
-                    : "icon_charging_station.png"
+                  pathname === "/station-statistics" ||
+                  pathname === "/device-statistics"
+                    ? "icon_statistics_active.png"
+                    : "icon_statistics.png"
                 }`}
                 width={15}
                 height={15}
@@ -133,19 +172,21 @@ export default function Sidebar() {
 
               <h1
                 className={`text-[10px] ${
-                  pathname === "/charging-stations" ||
-                  pathname === "/chargers"
+                  pathname === "/station-statistics" ||
+                  pathname === "/device-statistics"
                     ? "text-[#355FF5]"
                     : "text-[#6E82A5]"
                 } font-semibold`}
               >
-                Charging Stations
+                Statistics
               </h1>
             </div>
             {isOpen ? (
-              <IoIosArrowUp className="text-[#6E82A5] text-[8px]  " />
+        <IoIosArrowUp className="text-[#6E82A5] text-[8px]  " />
+
             ) : (
               <IoIosArrowDown className="text-[#6E82A5] text-[8px]  " />
+
             )}
           </div>
           <div
@@ -154,43 +195,43 @@ export default function Sidebar() {
             }`}
           >
             <div className="w-full ">
-              <Link href="/charging-stations">
+              <Link href="/station-statistics">
                 <p
                   className={`text-[8px] mx-2 my-1 px-7 py-1 rounded-lg cursor-pointer ${
-                    pathname === "/charging-stations"
+                    pathname === "/station-statistics"
                       ? "text-[#355FF5] bg-[#EFF2FC] font-medium"
                       : "text-[#6E82A5] font-light"
                   }`}
                 >
-                  Charging Stations
+                  Station Statistics
                 </p>
               </Link>
-              <Link href="/chargers">
+              <Link href="/device-statistics">
                 <p
                   className={`text-[8px] mx-2 my-1 px-7 py-1 rounded-lg cursor-pointer ${
-                    pathname === "/chargers"
+                    pathname === "/device-statistics"
                       ? "text-[#355FF5] bg-[#EFF2FC] font-medium"
                       : "text-[#6E82A5] font-light"
                   }`}
                 >
-                  Chargers{" "}
+                  Device Statistics
                 </p>
               </Link>
             </div>
           </div>
         </div>
       </div>
-      <Link href="/revenue">
+      <Link href="/operation-log">
         <div
           className={`flex justify-start items-center ${
-            pathname === "/revenue" ? "bg-[#EFF2FC]" : ""
+            pathname === "/operation-log" ? "bg-[#EFF2FC]" : ""
           }  py-2 px-4 mx-2  rounded-lg`}
         >
           <Image
             src={`/images/${
-              pathname === "/revenue"
-                ? "icon_revenue_active.png"
-                : "icon_revenue.png"
+              pathname === "/operation-log"
+                ? "icon_operation_log_active.png"
+                : "icon_operation_log.png"
             }`}
             width={12}
             height={17.25}
@@ -200,41 +241,12 @@ export default function Sidebar() {
 
           <h1
             className={`text-[10px] ${
-              pathname === "/revenue"
+              pathname === "/operation-log"
                 ? "text-[#355FF5]"
                 : "text-[#6E82A5]"
             } font-semibold`}
           >
-            Revenue
-          </h1>
-        </div>
-      </Link>
-      <Link href="/shop">
-        <div
-          className={`flex justify-start items-center ${
-            pathname === "/shop" ? "bg-[#EFF2FC]" : ""
-          }  py-2 px-4 mx-2  rounded-lg`}
-        >
-          <Image
-            src={`/images/${
-              pathname === "/shop"
-                ? "icon_shop_active.png"
-                : "icon_shop.png"
-            }`}
-            width={12}
-            height={17.25}
-            alt="Operation Log Icon"
-            className="mr-2"
-          />
-
-          <h1
-            className={`text-[10px] ${
-              pathname === "/shop"
-                ? "text-[#355FF5]"
-                : "text-[#6E82A5]"
-            } font-semibold`}
-          >
-            Shop
+            Operation log
           </h1>
         </div>
       </Link>
