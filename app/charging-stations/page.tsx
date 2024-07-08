@@ -214,7 +214,7 @@ const Page = () => {
   );
 
   return (
-    <div className="mx-4 bg-white h-[500px] p-4 rounded-md">
+    <div className="mx-4 bg-white h-[400px] p-4 rounded-md">
       <div className="w-full flex justify-between items-center">
         <p className="text-[#364A63] text-[12px] font-medium">
           Charging Stations
@@ -246,7 +246,7 @@ const Page = () => {
 
       </div>
       </div>
-      <div className="w-full h-[340px] overflow-hidden">
+      <div className="w-full h-[260px] overflow-hidden">
         <table className="w-full table-auto border-separate border-spacing-y-3">
           <thead className="bg-[#355FF5] text-white z-10">
             <tr className="text-center">
@@ -271,8 +271,8 @@ const Page = () => {
             </tr>
           </thead>
         </table>
-        <div className="max-h-[310px] overflow-y-scroll">
-          <table className="w-full table-auto border-separate border-spacing-y-3">
+        <div className="max-h-max overflow-y-scroll">
+          <table className="w-full table-auto border-separate border-spacing-y-2">
             <tbody className="w-full">
               {paginatedData.map((station) => (
                 <tr
