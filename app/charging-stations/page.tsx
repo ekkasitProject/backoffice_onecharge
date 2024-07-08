@@ -246,32 +246,32 @@ const Page = () => {
 
       </div>
       </div>
-      <div className="w-full h-[270px] overflow-hidden">
-  <table className="w-full table-auto border-separate border-spacing-y-3">
-    <thead className="bg-[#355FF5] text-white sticky top-0 z-10">
+      <div className="w-full h-[260px]">
+      <table className="w-full table-auto border-separate border-spacing-y-3">
+      <thead className="bg-[#355FF5]  text-white">
             <tr className="text-center">
-              <th className="w-[20%] px-4 py-2 rounded-tl-lg text-[8px] font-light uppercase">
+              <th className="w-[20%] px-4 py-2  rounded-tl-lg text-[8px] font-light uppercase">
                 Charging Stations
               </th>
-              <th className="w-[15%] px-4 py-2 text-[8px] font-light uppercase">
+              <th className="w-[15%] px-4 py-2  text-[8px] font-light uppercase ">
                 Chargers
               </th>
-              <th className="w-[15%] px-4 py-2 text-[8px] font-light uppercase">
+              <th className="w-[15%] px-4 py-2  text-[8px] font-light uppercase ">
                 Team
               </th>
-              <th className="w-[20%] px-4 py-2 text-[8px] font-light uppercase">
+              <th className="w-[20%] px-4 py-2  text-[8px] font-light uppercase ">
                 Accessibility
               </th>
-              <th className="w-[15%] px-4 py-2 text-[8px] font-light uppercase">
+              <th className="w-[15%] px-4 py-2  text-[8px] font-light uppercase ">
                 Created
               </th>
-              <th className="w-[15%] px-4 py-2 rounded-tr-lg w-300 text-[8px] font-light uppercase">
+              <th className="w-[15%] px-4 py-2  rounded-tr-lg w-300 text-[8px] font-light uppercase">
                 Action
               </th>
             </tr>
           </thead>
         </table>
-        <div className="max-h-[250px] overflow-y-auto">
+        <div className="h-[220px] overflow-y-auto">
     <table className="w-full table-fixed border-separate border-spacing-y-1">
       <tbody className="w-full">
               {paginatedData.map((station) => (
@@ -331,12 +331,11 @@ const Page = () => {
                   </td>
                 </tr>
               ))}
-              {selectedValue ===10 || selectedValue === 15 ? <div className="h-[28px]"></div> : null}
             </tbody>
           </table>
         </div>
       </div>
-      <div className="w-full h-[30px] flex justify-between items-center my-2">
+      <div className="w-full h-[50px] flex justify-between items-center  my-2">
         <div className="w-[200px] flex justify-between items-center ">
           <p className="text-[#364A63] text-[8px] font-light">
             Showing {(currentPage - 1) * selectedValue + 1} to{" "}
