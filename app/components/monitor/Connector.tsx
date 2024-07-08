@@ -1,24 +1,9 @@
-import React, { useState } from "react";
-import { FiMinusCircle, FiPlusCircle } from "react-icons/fi";
+import React, { useState } from 'react'
 
-export default function Configuration() {
-  const [value, setValue] = useState(true);
-  const [number, setNumber] = useState(100);
+export default function Connector() {
+    const [value, setValue] = useState(true);
 
-  const handleClick = () => setValue(!value);
-
-  const increment = () => {
-    if (number < 100) {
-      setNumber(number + 1);
-    }
-  }
-
-  const decrement = () => {
-    if (number > 0) {
-      setNumber(number - 1);
-    }
-  }
-
+    const handleClick = () => setValue(!value);
   return (
     <div className="w-full h-[120px] ">
       <div className="w-full h-[1px] bg-[#E0E0E0] my-2" />
@@ -27,9 +12,9 @@ export default function Configuration() {
         <p className="text-[9px] text-[#7B7B7B] font-light">Value</p>
       </div>
       <div className="w-full h-[1px] bg-[#E0E0E0] my-2" />
-      <div className="w-[225px] flex justify-between">
-        <p className="text-[9px] text-[#7B7B7B] font-light">Availability</p>
-        <div className="w-[100px] flex justify-between">
+      <div className="w-[210px] flex justify-between">
+        <p className="text-[9px] text-[#7B7B7B] font-light">Cable Lock</p>
+        <div className="w-[85px] flex justify-between">
           <button
             className={` px-2 py-[2px] rounded-md ${
               value ? "bg-[#355FF5]" : "bg-[#EBEBEB]"
@@ -41,7 +26,7 @@ export default function Configuration() {
                 value ? "text-white" : "text-[#7B7B7B]"
               }`}
             >
-              Available
+              Locked
             </p>
           </button>
           <button
@@ -55,20 +40,13 @@ export default function Configuration() {
                 value ? "text-[#7B7B7B]" : "text-white"
               }`}
             >
-              Disable
+              Unlock
             </p>
           </button>
         </div>
       </div>
-      <div className="w-[195px] flex justify-between mt-2">
-        <p className="text-[9px] text-[#7B7B7B] font-light">LED Brightness</p>
-        <div className="w-[70px] flex justify-between items-center">
-          <FiPlusCircle className="text-[#5B88E4] text-[20px]" onClick={increment} />
-          <p className="text-[10px] text-[#7B7B7B] font-medium px-1"> {number}%</p>
-          <FiMinusCircle className="text-[#5B88E4]  text-[20px]"  onClick={decrement}/>
-        </div>
-      </div>
+     
       <div className="w-full h-[1px] bg-[#E0E0E0] my-2" />
     </div>
-  );
+  )
 }

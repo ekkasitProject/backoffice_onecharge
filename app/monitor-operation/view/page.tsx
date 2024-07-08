@@ -1,6 +1,8 @@
 "use client";
 import ChargerDetail from "@/app/components/monitor/ChargerDetail";
 import Configuration from "@/app/components/monitor/Configuration";
+import Connector from "@/app/components/monitor/Connector";
+import Service from "@/app/components/monitor/Service";
 import React, { useState } from "react";
 
 export default function page() {
@@ -65,6 +67,8 @@ export default function page() {
             </div>
             {currentComponent === "ChargerDetail" && <ChargerDetail />}
             {currentComponent === "Configuration" && <Configuration />}
+            {currentComponent === "Connector" && <Connector />}
+            {currentComponent === "Service" && <Service />}
           </div>
         </div>
 
