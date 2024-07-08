@@ -219,9 +219,9 @@ const Page = () => {
         <p className="text-[#364A63] text-[12px] font-medium">
           Charging Stations
         </p>
-        <button className="w-[75px] flex justify-between items-center bg-[#355FF5] px-4 py-[4px] rounded-md">
-          <FaPlus className="text-white text-[12px]" />
-          <p className="text-white text-[12px] font-medium">ADD</p>
+        <button className="w-[60px] flex justify-between items-center bg-[#355FF5] px-3 py-[2px] rounded-md">
+          <FaPlus className="text-white text-[10px]" />
+          <p className="text-white text-[10px] font-medium">ADD</p>
         </button>
       </div>
       <div className="w-full h-[1px] bg-[#E0E0E0] my-2" />
@@ -246,9 +246,9 @@ const Page = () => {
 
       </div>
       </div>
-      <div className="w-full h-[260px] overflow-hidden">
-        <table className="w-full table-auto border-separate border-spacing-y-3">
-          <thead className="bg-[#355FF5] text-white z-10">
+      <div className="w-full h-[270px] overflow-hidden">
+  <table className="w-full table-auto border-separate border-spacing-y-3">
+    <thead className="bg-[#355FF5] text-white sticky top-0 z-10">
             <tr className="text-center">
               <th className="w-[20%] px-4 py-2 rounded-tl-lg text-[8px] font-light uppercase">
                 Charging Stations
@@ -271,9 +271,9 @@ const Page = () => {
             </tr>
           </thead>
         </table>
-        <div className="max-h-max overflow-y-scroll">
-          <table className="w-full table-auto border-separate border-spacing-y-2">
-            <tbody className="w-full">
+        <div className="max-h-[250px] overflow-y-auto">
+    <table className="w-full table-fixed border-separate border-spacing-y-1">
+      <tbody className="w-full">
               {paginatedData.map((station) => (
                 <tr
                   key={station.id}
@@ -331,6 +331,7 @@ const Page = () => {
                   </td>
                 </tr>
               ))}
+              {selectedValue ===10 || selectedValue === 15 ? <div className="h-[28px]"></div> : null}
             </tbody>
           </table>
         </div>
@@ -355,8 +356,8 @@ const Page = () => {
               )}
             </div>
             {isOpen && (
-              <div className="w-[80px] h-[100px] absolute bottom-8 bg-white border border-[#C0C4CC]  mt-1">
-                {[5, 10, 15, 20, 25, 30].map((value) => (
+              <div className="w-[80px] absolute bottom-8 bg-white border border-[#C0C4CC]  mt-1">
+                {[5, 10, 15].map((value) => (
                   <div
                     key={value}
                     className="cursor-pointer text-[##898989] text-[8px] font-light p-1"
