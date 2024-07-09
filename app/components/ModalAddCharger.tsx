@@ -285,7 +285,7 @@ const ModalAddCharger: React.FC<ModalAddChargerProps> = ({ onClose }) => {
                   <p className="text-[10px] font-normal">{selectedType}</p>
                 </div>
                 <IoIosArrowDown className="text-[#CACACA] text-[10px]" />
-                {isDropdownOpen.type && (
+                {isDropdownOpen.type && types.length > 0 && (
                   <div className="absolute top-10 left-0 right-0 w-full max-h-[150px] overflow-y-auto bg-white border-[1px] border-[#D9D8DF] rounded-md">
                     {types.map((type) => (
                       <button
@@ -311,7 +311,7 @@ const ModalAddCharger: React.FC<ModalAddChargerProps> = ({ onClose }) => {
                   <p className="text-[10px] font-normal">{selectedPower}</p>
                 </div>
                 <IoIosArrowDown className="text-[#CACACA] text-[10px]" />
-                {isDropdownOpen.power && (
+                {isDropdownOpen.power &&  powers.length > 0 && (
                   <div className="absolute top-10 left-0 right-0 w-full max-h-[150px] overflow-y-auto bg-white border-[1px] border-[#D9D8DF] rounded-md">
                     {powers.map((power) => (
                       <button
@@ -327,7 +327,6 @@ const ModalAddCharger: React.FC<ModalAddChargerProps> = ({ onClose }) => {
               </div>
             </div>
 
-            <div className="mb-[70px]" />
           </div>
         )}
         {step === 3 && (
@@ -514,9 +513,7 @@ const ModalAddCharger: React.FC<ModalAddChargerProps> = ({ onClose }) => {
 
         {step < 4 && (
           <div
-            className={`absolute bottom-0 left-0 right-0 px-4 flex justify-between items-center  ${
-              isDropdownOpen.power ? "border-t-2" : ""
-            } `}
+            className="absolute bottom-0 left-0 right-0 px-4 flex justify-between items-center"
           >
             <div
               className="w-[48%] flex justify-center items-center py-4 my-2 bg-white cursor-pointer hover:bg-[#eff0f7] outline outline-1 outline-[#6576FF] rounded-md"
