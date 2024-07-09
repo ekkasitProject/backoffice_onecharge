@@ -12,153 +12,123 @@ import ModalAddChargingStation from "../components/ModalAddChargingStation";
 const data = [
   {
     id: 1,
-    name: "OneCharge Solution 1",
-    location: "Nonthaburi, Nonthaburi",
-    chargers: 5,
+    chargerName: "Piwin Charger 1",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
     accessibility: "Public",
+    status: "Available",
+    connection: "Connected",
     createdDate: "12/01/2023",
     createdTime: "11 : 23 : 38",
   },
   {
     id: 2,
-    name: "OneCharge Solution 2",
-    location: "Bangkok, Bangkok",
-    chargers: 8,
+    chargerName: "Piwin Charger 2",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
     accessibility: "Private",
+    status: "Preparing",
+    connection: "Connected",
     createdDate: "12/02/2023",
     createdTime: "10 : 15 : 20",
   },
   {
     id: 3,
-    name: "OneCharge Solution 3",
-    location: "Chiang Mai, Chiang Mai",
-    chargers: 3,
+    chargerName: "Piwin Charger 3",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
     accessibility: "Public",
+    status: "Charging",
+    connection: "Connected",
     createdDate: "12/03/2023",
     createdTime: "09 : 45 : 55",
   },
   {
     id: 4,
-    name: "OneCharge Solution 4",
-    location: "Phuket, Phuket",
-    chargers: 6,
+    chargerName: "Piwin Charger 4",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
     accessibility: "Private",
+    status: "Faulted",
+    connection: "Connected",
     createdDate: "12/04/2023",
     createdTime: "14 : 30 : 10",
   },
   {
     id: 5,
-    name: "OneCharge Solution 5",
-    location: "Pattaya, Chon Buri",
-    chargers: 4,
+    chargerName: "Piwin Charger 5",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
     accessibility: "Public",
+    status: "Offline",
+    connection: "Connected",
     createdDate: "12/05/2023",
     createdTime: "16 : 20 : 45",
   },
   {
     id: 6,
-    name: "OneCharge Solution 6",
-    location: "Ayutthaya, Ayutthaya",
-    chargers: 2,
+    chargerName: "Piwin Charger 6",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
     accessibility: "Private",
+    status: "Available",
+    connection: "Connected",
     createdDate: "12/06/2023",
     createdTime: "08 : 55 : 30",
   },
   {
     id: 7,
-    name: "OneCharge Solution 7",
-    location: "Udon Thani, Udon Thani",
-    chargers: 7,
+    chargerName: "Piwin Charger 7",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
     accessibility: "Public",
+    status: "Available",
+    connection: "Connected",
     createdDate: "12/07/2023",
     createdTime: "13 : 10 : 15",
   },
   {
     id: 8,
-    name: "OneCharge Solution 8",
-    location: "Samut Prakan, Samut Prakan",
-    chargers: 9,
+    chargerName: "Piwin Charger 8",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
     accessibility: "Private",
+    status: "Available",
+    connection: "Connected",
     createdDate: "12/08/2023",
     createdTime: "17 : 45 : 22",
   },
   {
     id: 9,
-    name: "OneCharge Solution 9",
-    location: "Krabi, Krabi",
-    chargers: 3,
+    chargerName: "Piwin Charger 9",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
     accessibility: "Public",
+    status: "Available",
+    connection: "Connected",
     createdDate: "12/09/2023",
     createdTime: "09 : 00 : 11",
   },
   {
     id: 10,
-    name: "OneCharge Solution 10",
-    location: "Surat Thani, Surat Thani",
-    chargers: 6,
+    chargerName: "Piwin Charger 10",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
-    accessibility: "Private",
+    accessibility: "Private",   
+    status: "Available",
+    connection: "Connected",
     createdDate: "12/10/2023",
     createdTime: "12 : 20 : 30",
-  },
-  {
-    id: 11,
-    name: "OneCharge Solution 11",
-    location: "Rayong, Rayong",
-    chargers: 4,
-    team: "OneCharge Solution",
-    accessibility: "Public",
-    createdDate: "12/11/2023",
-    createdTime: "14 : 55 : 48",
-  },
-  {
-    id: 12,
-    name: "OneCharge Solution 12",
-    location: "Nakhon Ratchasima, Nakhon Ratchasima",
-    chargers: 5,
-    team: "OneCharge Solution",
-    accessibility: "Private",
-    createdDate: "12/12/2023",
-    createdTime: "16 : 10 : 05",
-  },
-  {
-    id: 13,
-    name: "OneCharge Solution 13",
-    location: "Phitsanulok, Phitsanulok",
-    chargers: 3,
-    team: "OneCharge Solution",
-    accessibility: "Public",
-    createdDate: "12/13/2023",
-    createdTime: "18 : 30 : 20",
-  },
-  {
-    id: 14,
-    name: "OneCharge Solution 14",
-    location: "Chiang Rai, Chiang Rai",
-    chargers: 7,
-    team: "OneCharge Solution",
-    accessibility: "Private",
-    createdDate: "12/14/2023",
-    createdTime: "11 : 40 : 38",
-  },
-  {
-    id: 15,
-    name: "OneCharge Solution 15",
-    location: "Hat Yai, Songkhla",
-    chargers: 4,
-    team: "OneCharge Solution",
-    accessibility: "Public",
-    createdDate: "12/15/2023",
-    createdTime: "10 : 05 : 55",
   },
 ];
 
@@ -183,15 +153,14 @@ const Page = () => {
   };
 
   const filteredData = data
-  .filter((item) =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase())
-  )
-  .filter((item) =>
-    accessibilityFilter ? item.accessibility === accessibilityFilter : true
-  );
+    .filter((item) =>
+      item.chargerName.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .filter((item) =>
+      accessibilityFilter ? item.accessibility === accessibilityFilter : true
+    );
 
-const totalPages = Math.ceil(filteredData.length / selectedValue);
-
+  const totalPages = Math.ceil(filteredData.length / selectedValue);
 
   const handleToggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -214,7 +183,6 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
     (currentPage - 1) * selectedValue,
     currentPage * selectedValue
   );
-
 
   return (
     <div className="mx-4 bg-white h-[400px] p-4 rounded-md">
@@ -287,22 +255,28 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
         <table className="w-full table-auto border-separate border-spacing-y-3">
           <thead className="bg-[#355FF5] text-white">
             <tr className="text-center">
-              <th className="w-[20%] px-4 py-2 rounded-tl-lg text-[8px] font-light uppercase">
-                Charging Stations
-              </th>
-              <th className="w-[15%] px-4 py-2 text-[8px] font-light uppercase">
+              <th className="w-[12.5%] px-4 py-2 rounded-tl-lg text-[8px] font-light uppercase">
                 Chargers
               </th>
-              <th className="w-[15%] px-4 py-2 text-[8px] font-light uppercase">
+              <th className="w-[12.5%] px-4 py-2 text-[8px] font-light uppercase">
+                CharGing Stations
+              </th>
+              <th className="w-[12.5%] px-4 py-2 text-[8px] font-light uppercase">
                 Team
               </th>
-              <th className="w-[20%] px-4 py-2 text-[8px] font-light uppercase">
+              <th className="w-[12.5%] px-4 py-2 text-[8px] font-light uppercase">
                 Accessibility
               </th>
-              <th className="w-[15%] px-4 py-2 text-[8px] font-light uppercase">
+              <th className="w-[12.5%] px-4 py-2 text-[8px] font-light uppercase">
+                Accessibility
+              </th>
+              <th className="w-[12.5%] px-4 py-2 text-[8px] font-light uppercase">
+                Connection
+              </th>
+              <th className="w-[12.5%] px-4 py-2 text-[8px] font-light uppercase">
                 Created
               </th>
-              <th className="w-[15%] px-4 py-2 rounded-tr-lg text-[8px] font-light uppercase">
+              <th className="w-[12.5%] px-4 py-2 rounded-tr-lg text-[8px] font-light uppercase">
                 Action
               </th>
             </tr>
@@ -311,55 +285,98 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
         <div className="h-[220px] overflow-y-auto">
           <table className="w-full table-fixed border-separate border-spacing-y-1">
             <tbody className="w-full">
-              {paginatedData.map((station) => (
+              {paginatedData.map((charger) => (
                 <tr
-                  key={station.id}
+                  key={charger.id}
                   className="text-center my-2 bg-white"
                   style={{ boxShadow: "2px 2px 8px 4px rgba(0, 0, 0, 0.05)" }}
                 >
-                  <td className="w-[20%] py-1">
+                  <td className="w-[12.5%] py-1">
                     <div className="flex justify-center items-center">
                       <div className="w-[30px] h-[30px]">
-                        <img src="images/station.png" alt="Station" className="p-1"/>
+                        <img
+                          src="images/image_charger.png"
+                          alt="Station"
+                          className="p-1"
+                        />
                       </div>
                       <div className="flex flex-col justify-center items-start ml-2">
                         <p className="text-[#364A63] text-[7px] font-medium">
-                          {station.name}
+                          {charger.chargerName}
                         </p>
                         <p className="text-[#364A63] text-[7px] font-extralight">
-                          {station.location
-                            ? station.location.length > 20
-                              ? station.location.substring(0, 20) + "..."
-                              : station.location
+                          S/N
+                          {charger.serialNumber
+                            ? charger.serialNumber.length > 20
+                              ? charger.serialNumber.substring(0, 20) + "..."
+                              : charger.serialNumber
                             : "N/A"}
                         </p>
                       </div>
                     </div>
                   </td>
-                  <td className="w-[15%] py-1 text-[#364A63] text-[7px]">
-                    {station.chargers}
-                  </td>
-                  <td className="w-[15%] py-1">
-                    <div className="bg-[#EFF2FC] px-2 py-1 rounded-md">
-                      <p className="text-[#355FF5] text-[7px] font-medium">
-                        {station.team}
+                  <td className="w-[12.5%] py-1">
+                    <div className="bg-[#EFF2FC] mx-2 py-1 rounded-md">
+                      <p className="text-[#355FF5] text-[6px] font-normal">
+                        {charger.chargingStation}
                       </p>
                     </div>
                   </td>
-                  <td className="w-[20%] py-1 text-[#364A63] text-[7px]">
-                    {station.accessibility}
+
+                  <td className="w-[12.5%] py-1">
+                    <div className="bg-[#EFF2FC] mx-2 py-1 rounded-md">
+                      <p className="text-[#355FF5] text-[6px] font-normal">
+                        {charger.team}
+                      </p>
+                    </div>
                   </td>
-                  <td className="w-[15%] py-1">
+
+                  <td className="w-[12.5%] py-1 text-[#364A63] text-[7px]">
+                    {charger.accessibility}
+                  </td>
+                  <td className="w-[12.5%] py-1">
+                    <div
+                      className={` mx-4 py-1 rounded-md ${
+                        charger.status === "Available"
+                          ? "bg-[#DFF8F3]"
+                          : charger.status === "Preparing" ||
+                            charger.status === "Charging"
+                          ? "bg-[#FFE5D1]"
+                          : charger.status === "Faulted"
+                          ? "bg-[#FFDCD4]"
+                          : "bg-[#EDEDED]"
+                      }`}
+                    >
+                      <p
+                        className={`text-[7px] font-medium ${
+                          charger.status === "Available"
+                            ? "text-[#0D8A72]"
+                            : charger.status === "Preparing" ||
+                              charger.status === "Charging"
+                            ? "text-[#FF9640]"
+                            : charger.status === "Faulted"
+                            ? "text-[#BC3A00]"
+                            : "text-[#6B6B6B]"
+                        }`}
+                      >
+                        {charger.status}
+                      </p>
+                    </div>
+                  </td>
+                  <td className="w-[12.5%] py-1 text-[#364A63] text-[7px]">
+                    {charger.connection}
+                  </td>
+                  <td className="w-[12.5%] py-1">
                     <div className="flex flex-col justify-center items-center">
                       <p className="text-[#364A63] text-[7px] font-light">
-                        {station.createdDate}
+                        {charger.createdDate}
                       </p>
                       <p className="text-[#364A63] text-[7px] font-light">
-                        {station.createdTime}
+                        {charger.createdDate}
                       </p>
                     </div>
                   </td>
-                  <td className="w-[15%] py-1">
+                  <td className="w-[12.5%] py-1">
                     <div className="flex justify-center">
                       <img
                         src="images/icon_edit.png"
