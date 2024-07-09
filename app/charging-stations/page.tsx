@@ -235,7 +235,7 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
         <div className="w-[130px] flex justify-between items-center bg-[#ECF2F8] px-2 py-2 border-[1px] border-[#D9D8DF] rounded-md">
           <input
             type="text"
-            className="bg-transparent text-[8px] font-light text-[#A1B1D1] focus:outline-none"
+            className="bg-transparent text-[7px] font-light text-[#A1B1D1] focus:outline-none"
             placeholder="Search by Charging Stations"
             onChange={handleSearchChange}
             value={searchTerm}
@@ -250,7 +250,7 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
           className="relative w-[100px] flex justify-between items-center bg-[#ECF2F8] px-3 py-2 border-[1px] border-[#D9D8DF] rounded-md"
           onClick={() => setIsDropdownStatus(!isDropdownStatus)}
         >
-          <p className="text-[8px] font-light text-[#A1B1D1]">
+          <p className="text-[7px] font-light text-[#A1B1D1]">
             Filter By Status
           </p>
           {isDropdownStatus ? (
@@ -265,19 +265,19 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
                 className="w-full flex  items-center py-2 px-1"
                 onClick={() => handleAccessibilityChange("")}
               >
-                <p className="text-[#6E82A5] text-[8px] font-light ">All</p>
+                <p className="text-[#6E82A5] text-[7px] font-light ">All</p>
               </div>
               <div
                 className="w-full flex  items-center py-2 px-1"
                 onClick={() => handleAccessibilityChange("Public")}
               >
-                <p className="text-[#6E82A5] text-[8px] font-light ">Public</p>
+                <p className="text-[#6E82A5] text-[7px] font-light ">Public</p>
               </div>
               <div
                 className="w-full flex  items-center py-2 px-1"
                 onClick={() => handleAccessibilityChange("Private")}
               >
-                <p className="text-[#6E82A5] text-[8px] font-light ">Private</p>
+                <p className="text-[#6E82A5] text-[7px] font-light ">Private</p>
               </div>
             </div>
           )}
@@ -287,22 +287,22 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
         <table className="w-full table-auto border-separate border-spacing-y-3">
           <thead className="bg-[#355FF5] text-white">
             <tr className="text-center">
-              <th className="w-[20%] px-4 py-2 rounded-tl-lg text-[8px] font-light uppercase">
+              <th className="w-[20%] px-4 py-2 rounded-tl-lg text-[7px] font-light uppercase">
                 Charging Stations
               </th>
-              <th className="w-[15%] px-4 py-2 text-[8px] font-light uppercase">
+              <th className="w-[15%] px-4 py-2 text-[7px] font-light uppercase">
                 Chargers
               </th>
-              <th className="w-[15%] px-4 py-2 text-[8px] font-light uppercase">
+              <th className="w-[15%] px-4 py-2 text-[7px] font-light uppercase">
                 Team
               </th>
-              <th className="w-[20%] px-4 py-2 text-[8px] font-light uppercase">
+              <th className="w-[20%] px-4 py-2 text-[7px] font-light uppercase">
                 Accessibility
               </th>
-              <th className="w-[15%] px-4 py-2 text-[8px] font-light uppercase">
+              <th className="w-[15%] px-4 py-2 text-[7px] font-light uppercase">
                 Created
               </th>
-              <th className="w-[15%] px-4 py-2 rounded-tr-lg text-[8px] font-light uppercase">
+              <th className="w-[15%] px-4 py-2 rounded-tr-lg text-[7px] font-light uppercase">
                 Action
               </th>
             </tr>
@@ -315,7 +315,7 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
                 <tr
                   key={station.id}
                   className="text-center my-2 bg-white"
-                  style={{ boxShadow: "2px 2px 8px 4px rgba(0, 0, 0, 0.05)" }}
+                  style={{ boxShadow: "2px 2px 7px 4px rgba(0, 0, 0, 0.05)" }}
                 >
                   <td className="w-[20%] py-1">
                     <div className="flex justify-center items-center">
@@ -376,14 +376,14 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
       </div>
       <div className="w-full h-[50px] flex justify-between items-center my-2">
         <div className="w-[200px] flex justify-between items-center">
-          <p className="text-[#364A63] text-[8px] font-light">
+          <p className="text-[#364A63] text-[7px] font-light">
             Showing {(currentPage - 1) * selectedValue + 1} to{" "}
             {Math.min(currentPage * selectedValue, data.length)} of{" "}
             {data.length} Results
           </p>
           <div className="relative">
             <div
-              className="w-[70px] flex justify-between items-center cursor-pointer text-[#364A63] text-[8px] font-light bg-white border border-gray-300 px-3 py-1"
+              className="w-[70px] flex justify-between items-center cursor-pointer text-[#364A63] text-[7px] font-light bg-white border border-gray-300 px-3 py-1"
               onClick={handleToggleDropdown}
             >
               {selectedValue}{" "}
@@ -398,7 +398,7 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
                 {[5, 10, 15].map((value) => (
                   <div
                     key={value}
-                    className="cursor-pointer text-[#6E82A5] text-[8px] font-light p-1"
+                    className="cursor-pointer text-[#6E82A5] text-[7px] font-light p-1"
                     onClick={() => handleSelectValue(value)}
                   >
                     {value}
@@ -411,7 +411,7 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
         <div className="">
           <ul className="flex justify-between items-center">
             <li
-              className={`px-2 py-[3px] text-[#364A63] text-[8px] font-light ${
+              className={`px-2 py-[3px] text-[#364A63] text-[7px] font-light ${
                 currentPage === 1
                   ? "cursor-not-allowed opacity-50"
                   : "cursor-pointer"
@@ -427,14 +427,14 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
                   currentPage === i + 1
                     ? "text-[#0026FF] bg-[#D0DAFF] font-semibold rounded-md"
                     : "text-[#364A63] font-light"
-                } text-[8px] cursor-pointer`}
+                } text-[7px] cursor-pointer`}
                 onClick={() => handlePageChange(i + 1)}
               >
                 {i + 1}
               </li>
             ))}
             <li
-              className={`px-2 py-[3px] text-[#364A63] text-[8px] font-light ${
+              className={`px-2 py-[3px] text-[#364A63] text-[7px] font-light ${
                 currentPage === totalPages
                   ? "cursor-not-allowed opacity-50"
                   : "cursor-pointer"
