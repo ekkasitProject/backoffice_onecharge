@@ -185,25 +185,28 @@ const Page = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [accessibilityFilter, setAccessibilityFilter] = useState("");
-  const totalPages = Math.ceil(data.length / selectedValue);
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
+    setCurrentPage(1); // Reset page when search term changes
   };
 
   const handleAccessibilityChange = (value: string) => {
     setAccessibilityFilter(value);
     setIsDropdownStatus(false);
-    setCurrentPage(1);
+    setCurrentPage(1); // Reset page when accessibility filter changes
   };
 
   const filteredData = data
-    .filter((item) =>
-      item.name.toLowerCase().includes(searchTerm.toLowerCase())
-    )
-    .filter((item) =>
-      accessibilityFilter ? item.accessibility === accessibilityFilter : true
-    );
+  .filter((item) =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  )
+  .filter((item) =>
+    accessibilityFilter ? item.accessibility === accessibilityFilter : true
+  );
+
+const totalPages = Math.ceil(filteredData.length / selectedValue);
+
 
   const handleToggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -212,7 +215,7 @@ const Page = () => {
   const handleSelectValue = (value: number) => {
     setSelectedValue(value);
     setIsOpen(false);
-    setCurrentPage(1);
+    setCurrentPage(1); // Reset page when selected value changes
   };
 
   const handlePageChange = (page: number) => {
@@ -221,10 +224,12 @@ const Page = () => {
     }
   };
 
+  // Calculate paginatedData based on filteredData, selectedValue, and currentPage
   const paginatedData = filteredData.slice(
     (currentPage - 1) * selectedValue,
     currentPage * selectedValue
   );
+
 
   return (
     <div className="mx-4 bg-white h-[400px] p-4 rounded-md">
@@ -329,8 +334,8 @@ const Page = () => {
                 >
                   <td className="w-[20%] py-1">
                     <div className="flex justify-center items-center">
-                      <div className="w-[30px] h-[30px] bg-[#F0F0F0] rounded-full">
-                        <img src="images/station.png" alt="Station" />
+                      <div className="w-[30px] h-[30px]">
+                        <img src="images/station.png" alt="Station" className="p-1"/>
                       </div>
                       <div className="flex flex-col justify-center items-start ml-2">
                         <p className="text-[#364A63] text-[7px] font-medium">
