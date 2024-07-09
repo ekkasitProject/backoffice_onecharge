@@ -192,15 +192,16 @@ const ModalAddChargingStation: React.FC<ModalAddChargingStationProps> = ({
               />
             </div>
             <div className="px-4 py-2 ">
-              <span className="text-[12px] font-normal">Place Photo</span>
-              <p className="text-[10px] font-light text-[#6A6A6A]">
+              <p className="text-[12px] font-normal">Place Photo</p>
+              <span className="text-[10px] font-light text-[#6A6A6A]">
                 Add Helpful photos like storefronts, notices, or signs
                 (optional)
-              </p>
+              </span>
+              <span className="text-[10px] text-red-500"> Limit 4 images</span>
 
               {/* Render if no file selected */}
               {images.length === 0 && (
-                <button className="w-[100px] flex justify-between items-center p-2 my-2  bg-white rounded-full border">
+                <button className="w-[100px] flex justify-between items-center p-2 mt-2  bg-white rounded-full border">
                   <label
                     htmlFor="file-upload"
                     className="cursor-pointer w-full flex justify-center items-center"
@@ -224,8 +225,9 @@ const ModalAddChargingStation: React.FC<ModalAddChargingStationProps> = ({
                 </button>
               )}
 
+              {/* Render if images are selected */}
               {images.length > 0 && (
-                <div className="flex my-2">
+                <div className="flex mt-2">
                   {/* File Upload Button */}
                  {images.length <4 &&  <button className="w-[85px] h-[70px] flex justify-between items-center mr-2 p-2 bg-white rounded-xl border">
                     <label
