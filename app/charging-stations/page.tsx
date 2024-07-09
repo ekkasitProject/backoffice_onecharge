@@ -231,7 +231,7 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
         </button>
       </div>
       <div className="w-full h-[1px] bg-[#E0E0E0] my-2" />
-      <div className=" w-[240px] flex justify-between my-1">
+      <div className=" w-[250px] flex justify-between my-1">
         <div className="w-[130px] flex justify-between items-center bg-[#ECF2F8] px-2 py-2 border-[1px] border-[#D9D8DF] rounded-md">
           <input
             type="text"
@@ -247,11 +247,11 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
           />
         </div>
         <button
-          className="relative w-[100px] flex justify-between items-center bg-[#ECF2F8] px-3 py-2 border-[1px] border-[#D9D8DF] rounded-md"
+          className="relative w-[110px] flex justify-between items-center bg-[#ECF2F8] px-3 py-2 border-[1px] border-[#D9D8DF] rounded-md"
           onClick={() => setIsDropdownStatus(!isDropdownStatus)}
         >
           <p className="text-[7px] font-light text-[#A1B1D1]">
-            Filter By Status
+            {accessibilityFilter || "Filter By Accessibility"}
           </p>
           {isDropdownStatus ? (
             <IoIosArrowUp className="text-[#A1B1D1] text-[10px]" />
@@ -287,22 +287,22 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
         <table className="w-full table-auto border-separate border-spacing-y-3">
           <thead className="bg-[#355FF5] text-white">
             <tr className="text-center">
-              <th className="w-[20%] px-4 py-2 rounded-tl-lg text-[7px] font-light uppercase">
+              <th className="w-[20%] px-4 py-2 rounded-tl-lg text-[7px] font-normal uppercase">
                 Charging Stations
               </th>
-              <th className="w-[15%] px-4 py-2 text-[7px] font-light uppercase">
+              <th className="w-[15%] px-4 py-2 text-[7px] font-normal uppercase">
                 Chargers
               </th>
-              <th className="w-[15%] px-4 py-2 text-[7px] font-light uppercase">
+              <th className="w-[15%] px-4 py-2 text-[7px] font-normal uppercase">
                 Team
               </th>
-              <th className="w-[20%] px-4 py-2 text-[7px] font-light uppercase">
+              <th className="w-[20%] px-4 py-2 text-[7px] font-normal uppercase">
                 Accessibility
               </th>
-              <th className="w-[15%] px-4 py-2 text-[7px] font-light uppercase">
+              <th className="w-[15%] px-4 py-2 text-[7px] font-normal uppercase">
                 Created
               </th>
-              <th className="w-[15%] px-4 py-2 rounded-tr-lg text-[7px] font-light uppercase">
+              <th className="w-[15%] px-4 py-2 rounded-tr-lg text-[7px] font-normal uppercase">
                 Action
               </th>
             </tr>

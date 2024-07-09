@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function Navbar() {
   return (
@@ -28,14 +29,10 @@ export default function Navbar() {
             </p>
             <div className="flex justify-between">
               <p className="text-[#6E82A5] text-[9px] font-semibold">
-                Leadway Co.,Ltd
+                Onecharge Co., Ltd.
               </p>
-              <Image
-                src={`/images/icon_arrow_down.png`}
-                width={10}
-                height={13.5}
-                alt="menu"
-              />
+
+              <IoIosArrowDown className="text-[#6E82A5] text-[10px]" />
             </div>
           </div>
         </div>

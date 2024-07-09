@@ -54,7 +54,7 @@ const data = [
     team: "OneCharge Solution",
     accessibility: "Private",
     status: "Faulted",
-    connection: "Connected",
+    connection: "Not Connected",
     createdDate: "12/04/2023",
     createdTime: "14 : 30 : 10",
   },
@@ -199,7 +199,7 @@ const Page = () => {
         </button>
       </div>
       <div className="w-full h-[1px] bg-[#E0E0E0] my-2" />
-      <div className=" w-[240px] flex justify-between my-1">
+      <div className=" w-[250px] flex justify-between my-1">
         <div className="w-[130px] flex justify-between items-center bg-[#ECF2F8] px-2 py-2 border-[1px] border-[#D9D8DF] rounded-md">
           <input
             type="text"
@@ -215,11 +215,11 @@ const Page = () => {
           />
         </div>
         <button
-          className="relative w-[100px] flex justify-between items-center bg-[#ECF2F8] px-3 py-2 border-[1px] border-[#D9D8DF] rounded-md"
+          className="relative w-[110px] flex justify-between items-center bg-[#ECF2F8] px-3 py-2 border-[1px] border-[#D9D8DF] rounded-md"
           onClick={() => setIsDropdownStatus(!isDropdownStatus)}
         >
           <p className="text-[7px] font-light text-[#A1B1D1]">
-            Filter By Status
+            {accessibilityFilter || "Filter By Accessibility"}
           </p>
           {isDropdownStatus ? (
             <IoIosArrowUp className="text-[#A1B1D1] text-[10px]" />
@@ -255,28 +255,28 @@ const Page = () => {
         <table className="w-full table-auto border-separate border-spacing-y-3">
           <thead className="bg-[#355FF5] text-white">
             <tr className="text-center">
-              <th className="w-[12.5%] px-4 py-2 rounded-tl-lg text-[7px] font-light uppercase">
+              <th className="w-[15%] px-4 py-2 rounded-tl-lg text-[7px] font-normal uppercase">
                 Chargers
               </th>
-              <th className="w-[12.5%] px-4 py-2 text-[7px] font-light uppercase">
-                CharGing Stations
+              <th className="w-[15%] px-4 py-2 text-[7px] font-normal uppercase">
+                Charging Stations
               </th>
-              <th className="w-[12.5%] px-4 py-2 text-[7px] font-light uppercase">
+              <th className="w-[10%] px-4 py-2 text-[7px] font-normal uppercase">
                 Team
               </th>
-              <th className="w-[12.5%] px-4 py-2 text-[7px] font-light uppercase">
+              <th className="w-[10%] px-4 py-2 text-[7px] font-normal uppercase">
                 Accessibility
               </th>
-              <th className="w-[12.5%] px-4 py-2 text-[7px] font-light uppercase">
-                Accessibility
+              <th className="w-[10%] px-4 py-2 text-[7px] font-normal uppercase">
+                Status
               </th>
-              <th className="w-[12.5%] px-4 py-2 text-[7px] font-light uppercase">
+              <th className="w-[10%] px-4 py-2 text-[7px] font-normal uppercase">
                 Connection
               </th>
-              <th className="w-[12.5%] px-4 py-2 text-[7px] font-light uppercase">
+              <th className="w-[10%] px-4 py-2 text-[7px] font-normal uppercase">
                 Created
               </th>
-              <th className="w-[12.5%] px-4 py-2 rounded-tr-lg text-[7px] font-light uppercase">
+              <th className="w-[10%] px-4 py-2 rounded-tr-lg text-[7px] font-normal uppercase">
                 Action
               </th>
             </tr>
@@ -291,7 +291,7 @@ const Page = () => {
                   className="text-center my-2 bg-white"
                   style={{ boxShadow: "2px 2px 7px 4px rgba(0, 0, 0, 0.05)" }}
                 >
-                  <td className="w-[12.5%] py-1">
+                  <td className="w-[15%] py-1">
                     <div className="flex justify-center items-center">
                       <div className="w-[30px] h-[30px]">
                         <img
@@ -305,25 +305,25 @@ const Page = () => {
                           {charger.chargerName}
                         </p>
                         <p className="text-[#364A63] text-[7px] font-extralight">
-                          S/N
+                          S/N 
                           {charger.serialNumber
                             ? charger.serialNumber.length > 20
-                              ? charger.serialNumber.substring(0, 20) + "..."
-                              : charger.serialNumber
+                              ? " " + charger.serialNumber.substring(0, 20) + "..."
+                              : " " + charger.serialNumber
                             : "N/A"}
                         </p>
                       </div>
                     </div>
                   </td>
-                  <td className="w-[12.5%] py-1">
-                    <div className="bg-[#EFF2FC] mx-2 py-1 rounded-md">
+                  <td className="w-[15%] py-1">
+                    <div className="bg-[#EFF2FC] mx-4 py-1 rounded-md">
                       <p className="text-[#355FF5] text-[6px] font-normal">
                         {charger.chargingStation}
                       </p>
                     </div>
                   </td>
 
-                  <td className="w-[12.5%] py-1">
+                  <td className="w-[10%] py-1">
                     <div className="bg-[#EFF2FC] mx-2 py-1 rounded-md">
                       <p className="text-[#355FF5] text-[6px] font-normal">
                         {charger.team}
@@ -331,10 +331,10 @@ const Page = () => {
                     </div>
                   </td>
 
-                  <td className="w-[12.5%] py-1 text-[#364A63] text-[7px]">
+                  <td className="w-[10%] py-1 text-[#364A63] text-[7px]">
                     {charger.accessibility}
                   </td>
-                  <td className="w-[12.5%] py-1">
+                  <td className="w-[10%] py-1">
                     <div
                       className={` mx-4 py-1 rounded-md ${
                         charger.status === "Available"
@@ -363,10 +363,10 @@ const Page = () => {
                       </p>
                     </div>
                   </td>
-                  <td className="w-[12.5%] py-1 text-[#364A63] text-[7px]">
+                  <td className="w-[10%] py-1 text-[#364A63] text-[7px]">
                     {charger.connection}
                   </td>
-                  <td className="w-[12.5%] py-1">
+                  <td className="w-[10%] py-1">
                     <div className="flex flex-col justify-center items-center">
                       <p className="text-[#364A63] text-[7px] font-light">
                         {charger.createdDate}
@@ -376,7 +376,7 @@ const Page = () => {
                       </p>
                     </div>
                   </td>
-                  <td className="w-[12.5%] py-1">
+                  <td className="w-[10%] py-1">
                     <div className="flex justify-center">
                       <img
                         src="images/icon_edit.png"
