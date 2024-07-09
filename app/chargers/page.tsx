@@ -8,6 +8,7 @@ import {
   IoIosArrowUp,
 } from "react-icons/io";
 import ModalAddChargingStation from "../components/ModalAddChargingStation";
+import ModalAddCharger from "../components/ModalAddCharger";
 
 const data = [
   {
@@ -464,7 +465,7 @@ const Page = () => {
         </div>
       </div>
       {showModal && (
-        <ModalAddChargingStation onClose={() => setShowModal(false)} />
+        <ModalAddCharger onClose={() => setShowModal(false)} />
       )}
     </div>
   );

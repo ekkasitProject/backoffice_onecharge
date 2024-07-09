@@ -19,15 +19,6 @@ const ModalAddChargingStation: React.FC<ModalAddChargingStationProps> = ({
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleStep = (control: string) => {
-    if (control === null) {
-      onClose();
-    }
-    if (control === "prev") {
-      setStep(1);
-    }
-  };
-
   const handleDropdownOptionClick = (option: string) => {
     setSelectedCategory(option);
     setIsDropdownOpen(false);
@@ -46,7 +37,7 @@ const ModalAddChargingStation: React.FC<ModalAddChargingStationProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" >
       <div className="relative bg-white rounded-md shadow-lg w-[400px] h-[500px]">
         <div className="flex justify-between items-center shadow-sm shadow-[#0000001A] p-4 rounded-md">
           <h2 className="text-[14px] text-[#2B3674] font-semibold">
