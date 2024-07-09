@@ -187,12 +187,14 @@ const ModalAddCharger: React.FC<ModalAddChargerProps> = ({ onClose }) => {
   };
 
   const handleCopyLink = () => {
-    navigator.clipboard.writeText(ocppDomain).then(() => {
-      alert("Copied!");
-    }).catch((err) => {
-      console.error('Failed to copy: ', err);
-    })
-    
+    navigator.clipboard
+      .writeText(ocppDomain)
+      .then(() => {
+        alert("Copied!");
+      })
+      .catch((err) => {
+        console.error("Failed to copy: ", err);
+      });
   };
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
@@ -239,12 +241,7 @@ const ModalAddCharger: React.FC<ModalAddChargerProps> = ({ onClose }) => {
                     {team.name}
                   </button>
                 ))}
-                <button
-                  className="w-full p-3 cursor-pointer text-[10px] text-left hover:bg-gray-200"
-                  onClick={() => handleTeamSelect("Other")}
-                >
-                  Other
-                </button>
+              
               </div>
             </div>
           </div>
@@ -496,14 +493,12 @@ const ModalAddCharger: React.FC<ModalAddChargerProps> = ({ onClose }) => {
                 disabled
                 className="w-full bg-[#F2F2F2] px-2 py-3 rounded-s-md  text-[10px] focus:outline-none placeholder:font-light placeholder:text-[#CACACA]"
                 value={ocppDomain}
-
               />
-              <div className="bg-[#355FF5]  flex justify-center items-center pl-1 rounded-e-md "onClick={handleCopyLink}>
-                <img
-                  src="/images/icon_copy.png"
-                  alt=""
-                  className="w-[20px]"
-                />
+              <div
+                className="bg-[#355FF5]  flex justify-center items-center pl-1 rounded-e-md "
+                onClick={handleCopyLink}
+              >
+                <img src="/images/icon_copy.png" alt="" className="w-[20px]" />
               </div>
             </div>
             <div className=" my-4 w-full flex flex-col items-center">
