@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoMdCloseCircleOutline } from "react-icons/io";
 import { IoCloseOutline } from "react-icons/io5";
 
 interface ModalAddChargingStationProps {
@@ -14,7 +14,7 @@ const ModalAddChargingStation: React.FC<ModalAddChargingStationProps> = ({
     "Select your station type"
   );
   const [step, setStep] = useState(1);
-
+  const [images, setImages] = useState<File[]>([]);
   const handleDropdownClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
@@ -31,6 +31,18 @@ const ModalAddChargingStation: React.FC<ModalAddChargingStationProps> = ({
   const handleDropdownOptionClick = (option: string) => {
     setSelectedCategory(option);
     setIsDropdownOpen(false);
+  };
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (files) {
+      const newImages = Array.from(files);
+      setImages([...images, ...newImages]);
+    }
+  };
+  const handleRemoveImage = (index: number) => {
+    const newImages = [...images];
+    newImages.splice(index, 1);
+    setImages(newImages);
   };
 
   return (
@@ -132,7 +144,7 @@ const ModalAddChargingStation: React.FC<ModalAddChargingStationProps> = ({
         {step === 2 && (
           <div className="relative h-[430px] overflow-auto ">
             <div className="px-4 py-2 ">
-            <div className="w-full">
+              <div className="w-full">
                 <span className="text-[12px] font-normal">
                   Address (required)
                 </span>
@@ -181,30 +193,121 @@ const ModalAddChargingStation: React.FC<ModalAddChargingStationProps> = ({
             </div>
             <div className="px-4 py-2 ">
               <span className="text-[12px] font-normal">Place Photo</span>
-              <p className="text-[10px] font-light text-[#6A6A6A]">Add Helpful photos like storefronts, notices, or signs (optional)</p>
-              <div className="w-[100px] flex justify-between items-center p-2 mt-2 bg-white rounded-full border">
-                <img src="/images/image_upload.png" alt="" className="w-[25px] h-[25px]" />
-                <p className="text-[10px] text-[#355FF5]">Add Photos</p>
-              </div>
-              <p className="mt-2 text-[10px] font-light text-[#6A6A6A]">If you add photos, they will appear publicly with your profile name and picture. They will appear on Google services across the web, like Maps and Search, and on third-party sites and apps that use Google services. Google may also use them to update other information about this place.
-Claim this business
-</p>
+              <p className="text-[10px] font-light text-[#6A6A6A]">
+                Add Helpful photos like storefronts, notices, or signs
+                (optional)
+              </p>
+
+              {/* Render if no file selected */}
+              {images.length === 0 && (
+                <button className="w-[100px] flex justify-between items-center p-2 my-2  bg-white rounded-full border">
+                  <label
+                    htmlFor="file-upload"
+                    className="cursor-pointer w-full flex justify-center items-center"
+                  >
+                    <img
+                      src="/images/image_upload.png"
+                      alt=""
+                      className="w-[25px] h-[25px]"
+                    />
+                    <p className="text-[10px] text-[#355FF5] ml-1">
+                      Add Photos
+                    </p>
+                    <input
+                      type="file"
+                      id="file-upload"
+                      className="hidden"
+                      onChange={handleFileChange}
+                      multiple // Allow multiple file selection
+                    />
+                  </label>
+                </button>
+              )}
+
+              {images.length > 0 && (
+                <div className="flex my-2">
+                  {/* File Upload Button */}
+                 {images.length <4 &&  <button className="w-[85px] h-[70px] flex justify-between items-center mr-2 p-2 bg-white rounded-xl border">
+                    <label
+                      htmlFor="file-upload"
+                      className="cursor-pointer w-full flex justify-center items-center"
+                    >
+                      <img
+                        src="/images/image_upload.png"
+                        alt=""
+                        className="w-[25px] h-[25px]"
+                      />
+                      <input
+                        type="file"
+                        id="file-upload"
+                        className="hidden"
+                        onChange={handleFileChange}
+                        multiple // Allow multiple file selection
+                      />
+                    </label>
+                  </button>}
+
+                  {/* File Previews */}
+                  <div className="flex  space-x-2 flex-wrap">
+                    {images.map((image, index) => (
+                      <div
+                        key={index}
+                        className="relative"
+                        style={{ maxWidth: "85px" }}
+                      >
+                        <img
+                          src={URL.createObjectURL(image)}
+                          alt={`Preview ${index}`}
+                          className="rounded-md w-[85px] h-[70px]"
+                          style={{
+                            maxWidth: "85px",
+                            maxHeight: "70px",
+                            objectFit: "cover",
+                          }}
+                        />
+                        <button
+                          className="absolute top-1 right-1 p-[1px] bg-[#191a1a7b] rounded-full text-white"
+                          onClick={() => handleRemoveImage(index)}
+                        >
+                          <IoMdCloseCircleOutline />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <p className="mt-2 text-[10px] font-light text-[#6A6A6A]">
+                If you add photos, they will appear publicly with your profile
+                name and picture. They will appear on Google services across the
+                web, like Maps and Search, and on third-party sites and apps
+                that use Google services. Google may also use them to update
+                other information about this place. Claim this business
+              </p>
             </div>
-            <div className="mb-[70px]"/>
+            <div className="mb-[70px]" />
           </div>
         )}
-        <div className={`absolute bottom-0 left-0 right-0 px-4  flex justify-between items-center  bg-white ${step === 2 ? "border-t-2" : ""} `}>
+        <div
+          className={`absolute bottom-0 left-0 right-0 px-4  flex justify-between items-center  bg-white ${
+            step === 2 ? "border-t-2" : ""
+          } `}
+        >
           <div
             className="w-[48%] flex justify-center items-center py-4 my-2 bg-white cursor-pointer hover:bg-[#eff0f7] outline outline-1 outline-[#6576FF] rounded-md"
             onClick={step === 1 ? () => onClose() : () => setStep(1)}
           >
-            <p className="text-[10px] text-[#6576FF] font-normal">{step === 1 ? "Cancel" : "Back"}</p>
+            <p className="text-[10px] text-[#6576FF] font-normal">
+              {step === 1 ? "Cancel" : "Back"}
+            </p>
           </div>
           <div
             className="w-[48%] flex justify-center items-center py-4 my-2 bg-[#6576FF] cursor-pointer hover:bg-[#586bfa] rounded-md"
             onClick={step === 1 ? () => setStep(2) : () => onClose()}
           >
-            <p className="text-[10px] text-white font-normal">{step === 1 ? "Next" : "Submit"}</p>
+            <p className="text-[10px] text-white font-normal">
+              {step === 1 ? "Next" : "Submit"}
+            </p>
           </div>
         </div>
       </div>
