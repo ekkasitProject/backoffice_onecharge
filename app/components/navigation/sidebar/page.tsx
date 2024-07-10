@@ -156,10 +156,10 @@ export default function Sidebar() {
             <div className="w-full ">
               <Link href="/charging-stations">
                 <p
-                  className={`text-[8px] mx-2 my-1 px-7 py-1 rounded-lg cursor-pointer ${
+                  className={`text-[10px] mx-2 my-1 px-7 py-1 rounded-lg cursor-pointer ${
                     pathname === "/charging-stations"
                       ? "text-[#355FF5] bg-[#EFF2FC] font-medium"
-                      : "text-[#6E82A5] font-light"
+                      : "text-[#6E82A5] font-normal"
                   }`}
                 >
                   Charging Stations
@@ -167,10 +167,10 @@ export default function Sidebar() {
               </Link>
               <Link href="/chargers">
                 <p
-                  className={`text-[8px] mx-2 my-1 px-7 py-1 rounded-lg cursor-pointer ${
+                  className={`text-[10px] mx-2 my-1 px-7 py-1 rounded-lg cursor-pointer ${
                     pathname === "/chargers"
                       ? "text-[#355FF5] bg-[#EFF2FC] font-medium"
-                      : "text-[#6E82A5] font-light"
+                      : "text-[#6E82A5] font-normal"
                   }`}
                 >
                   Chargers{" "}
