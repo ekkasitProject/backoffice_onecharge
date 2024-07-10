@@ -113,8 +113,8 @@ export default function Sidebar() {
         <div>
           <div
             className={`flex justify-between items-center ${
-              pathname === "/statistics" ? "bg-[#EFF2FC]" : ""
-            } py-2 pl-4 pr-2 ml-2 rounded-lg cursor-pointer transition-colors duration-300`}
+              pathname === "/charging-stations" || pathname === "/chargers" ? "bg-[#EFF2FC]" : ""
+            } p-2 mx-2 rounded-lg cursor-pointer transition-colors duration-300`}
             onClick={handleToggle}
           >
             <div className="flex justify-start items-center">
@@ -158,7 +158,7 @@ export default function Sidebar() {
                 <p
                   className={`text-[10px] mx-2 my-1 px-7 py-1 rounded-lg cursor-pointer ${
                     pathname === "/charging-stations"
-                      ? "text-[#355FF5] bg-[#EFF2FC] font-medium"
+                      ? "text-[#355FF5] font-medium"
                       : "text-[#6E82A5] font-normal"
                   }`}
                 >
@@ -169,7 +169,7 @@ export default function Sidebar() {
                 <p
                   className={`text-[10px] mx-2 my-1 px-7 py-1 rounded-lg cursor-pointer ${
                     pathname === "/chargers"
-                      ? "text-[#355FF5] bg-[#EFF2FC] font-medium"
+                      ? "text-[#355FF5]  font-medium"
                       : "text-[#6E82A5] font-normal"
                   }`}
                 >

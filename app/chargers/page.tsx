@@ -289,7 +289,7 @@ const Page = () => {
               {paginatedData.map((charger) => (
                 <tr
                   key={charger.id}
-                  className="text-center my-2 bg-white"
+                  className="text-center my-2 bg-white hover:bg-[#e1e0e045] cursor-pointer"
                   style={{ boxShadow: "2px 2px 7px 4px rgba(0, 0, 0, 0.05)" }}
                 >
                   <td className="w-[15%] py-1">
