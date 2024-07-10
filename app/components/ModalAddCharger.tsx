@@ -111,6 +111,7 @@ const ModalAddCharger: React.FC<ModalAddChargerProps> = ({ onClose }) => {
   const [selectedChargerAccess, setSelectedChargerAccess] = useState(
     "Please select assessibility"
   );
+  const [serialNumber, setSerialNumber] = useState("");
   const [ocppDomain, setOcppDomain] = useState("ws://ocpp.onecharge.co.th");
 
   const handleDropdownClick = (dropdown: keyof typeof isDropdownOpen) => {
@@ -441,6 +442,7 @@ const ModalAddCharger: React.FC<ModalAddChargerProps> = ({ onClose }) => {
                 name=""
                 id=""
                 placeholder="Example: ‘123456789123456789’"
+                onChange={(e) => setSerialNumber(e.target.value)}
                 className="mx-2 mt-1 bg-[#F2F2F2] px-2 py-3 rounded-md  text-[10px] focus:outline-none placeholder:font-light placeholder:text-[#CACACA]"
               />
             </div>
@@ -491,7 +493,7 @@ const ModalAddCharger: React.FC<ModalAddChargerProps> = ({ onClose }) => {
                 id=""
                 disabled
                 className="w-full bg-[#F2F2F2] px-2 py-3 rounded-s-md  text-[10px] focus:outline-none placeholder:font-light placeholder:text-[#CACACA]"
-                value={ocppDomain}
+                value={`${ocppDomain}/${serialNumber}`}
               />
               <div
                 className="bg-[#355FF5]  flex justify-center items-center pl-1 rounded-e-md "
