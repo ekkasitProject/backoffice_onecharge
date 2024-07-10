@@ -192,7 +192,7 @@ const Page = () => {
           Charging Stations
         </p>
         <button
-          className="w-[60px] flex justify-between items-center bg-[#355FF5] px-3 py-[2px] rounded-md"
+          className="w-[60px] flex justify-between items-center bg-[#355FF5] px-3 py-[6px] rounded-md"
           onClick={() => setShowModal(true)}
         >
           <FaPlus className="text-white text-[10px]" />

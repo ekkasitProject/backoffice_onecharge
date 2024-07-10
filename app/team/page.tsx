@@ -77,14 +77,14 @@ const Page = () => {
     <div className="mx-4 bg-white h-[400px] p-4 rounded-md">
       <div className="w-full flex justify-between items-center">
         <p className="text-[#364A63] text-[12px] font-medium">
-          Charging Stations
+          Your Teams
         </p>
         <button
-          className="w-[60px] flex justify-between items-center bg-[#355FF5] px-3 py-[2px] rounded-md"
+          className="w-[90px] flex justify-between items-center bg-[#355FF5] px-3 py-[6px] rounded-md"
           onClick={() => setShowModal(true)}
         >
           <FaPlus className="text-white text-[10px]" />
-          <p className="text-white text-[10px] font-medium">ADD</p>
+          <p className="text-white text-[10px] font-medium">ADD TEAM</p>
         </button>
       </div>
       <div className="w-full h-[1px] bg-[#E0E0E0] my-2" />

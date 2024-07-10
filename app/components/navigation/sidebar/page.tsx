@@ -57,12 +57,12 @@ export default function Sidebar() {
         <Link href="/team">
           <div
             className={`flex justify-start items-center ${
-              pathname === "/team" ? "bg-[#EFF2FC]" : ""
+              pathname === "/team" || pathname === "/team/dashboard-team" ? "bg-[#EFF2FC]" : ""
             }  py-2 px-4 mx-2  rounded-lg`}
           >
             <Image
               src={`/images/${
-                pathname === "/team"
+                pathname === "/team"  || pathname === "/team/dashboard-team"
                   ? "icon_dashboard_active.png"
                   : "icon_dashboard.png"
               }`}
@@ -74,7 +74,7 @@ export default function Sidebar() {
 
             <h1
               className={`text-[10px] ${
-                pathname === "/team" ? "text-[#355FF5]" : "text-[#6E82A5]"
+                pathname === "/team" || pathname === "/team/dashboard-team" ? "text-[#355FF5]" : "text-[#6E82A5]"
               } font-semibold`}
             >
               Team

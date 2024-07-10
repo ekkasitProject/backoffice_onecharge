@@ -2,8 +2,10 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div className='w-full h-[100vh] bg-purple-50'>
-      
+    <div className="mx-4 bg-white h-[400px] p-4 rounded-md">
+      <div className=''>
+
+      </div>
     </div>
   )
 }
