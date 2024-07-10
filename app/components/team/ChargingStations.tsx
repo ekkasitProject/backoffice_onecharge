@@ -7,196 +7,186 @@ import {
   IoIosArrowForward,
   IoIosArrowUp,
 } from "react-icons/io";
-import ModalAddChargingStation from "../components/ModalAddChargingStation";
+import ModalAddChargingStation from "../ModalAddChargingStation";
 import Image from "next/image";
 
 const data = [
-  {
-    id: 1,
-    name: "OneCharge Solution 1",
-    location: "Nonthaburi, Nonthaburi",
-    chargers: 5,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 1",
-    accessibility: "Public",
-    createdDate: "12/01/2023",
-    createdTime: "11 : 23 : 38",
-  },
-  {
-    id: 2,
-    name: "OneCharge Solution 2",
-    location: "Bangkok, Bangkok",
-    chargers: 8,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 2",
-    accessibility: "Private",
-    createdDate: "12/02/2023",
-    createdTime: "10 : 15 : 20",
-  },
-  {
-    id: 3,
-    name: "OneCharge Solution 3",
-    location: "Chiang Mai, Chiang Mai",
-    chargers: 3,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 3",
-    accessibility: "Public",
-    createdDate: "12/03/2023",  
-    createdTime: "09 : 45 : 55",
-  },
-  {
-    id: 4,
-    name: "OneCharge Solution 4",
-    location: "Phuket, Phuket",
-    chargers: 6,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 4",
-    accessibility: "Private",
-    createdDate: "12/04/2023",
-    createdTime: "14 : 30 : 10",
-  },
-  {
-    id: 5,
-    name: "OneCharge Solution 5",
-    location: "Pattaya, Chon Buri",
-    chargers: 4,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 5",
-    accessibility: "Public",
-    createdDate: "12/05/2023",
-    createdTime: "11 : 23 : 38",  
-  },
-  {
-    id: 6,
-    name: "OneCharge Solution 6",
-    location: "Ayutthaya, Ayutthaya",
-    chargers: 2,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 6",
-    accessibility: "Private",
-    createdDate: "12/06/2023",
-    createdTime: "10 : 15 : 20",
-  },
-  {
-    id: 7,
-    name: "OneCharge Solution 7",
-    location: "Chiang Mai, Chiang Mai",
-    chargers: 3,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 7",
-    accessibility: "Public",
-    createdDate: "12/07/2023",
-    createdTime: "09 : 45 : 55",
-  },
-  {
-    id: 8,
-    name: "OneCharge Solution 8",
-    location: "Chon Buri, Chon Buri",
-    chargers: 6,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 8",
-    accessibility: "Private",
-    createdDate: "12/08/2023",
-    createdTime: "14 : 30 : 10",
-  },
-  {
-    id: 9,
-    name: "OneCharge Solution 9",
-    location: "Phuket, Phuket",
-    chargers: 4,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 9",
-    accessibility: "Public",
-    createdDate: "12/09/2023",
-    createdTime: "16 : 20 : 45",
-  },
-  {
-    id: 10,
-    name: "OneCharge Solution 10",
-    location: "Ayutthaya, Ayutthaya",
-    chargers: 2,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 10",
-    accessibility: "Private",
-    createdDate: "12/10/2023",
-    createdTime: "08 : 55 : 30",
-  },
-  {
-    id: 11,
-    name: "OneCharge Solution 11",
-    location: "Nonthaburi, Nonthaburi",
-    chargers: 5,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 11",
-    accessibility: "Public",
-    createdDate: "12/11/2023",
-    createdTime: "11 : 23 : 38",
-  },
-  {
-    id: 12,
-    name: "OneCharge Solution 12",
-    location: "Bangkok, Bangkok",
-    chargers: 8,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 12",
-    accessibility: "Private",
-    createdDate: "12/12/2023",
-    createdTime: "10 : 15 : 20",
-  },
-  {
-    id: 13,
-    name: "OneCharge Solution 13",
-    location: "Chiang Mai, Chiang Mai",
-    chargers: 3,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 13",
-    accessibility: "Public",
-    createdDate: "12/13/2023",
-    createdTime: "09 : 45 : 55",
-  },
-  {
-    id: 14,
-    name: "OneCharge Solution 14",
-    location: "Chon Buri, Chon Buri",
-    chargers: 6,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 14",
-    accessibility: "Private",
-    createdDate: "12/14/2023",
-    createdTime: "14 : 30 : 10",
-    }
-];
-
+    {
+      id: 1,
+      name: "OneCharge Solution 1",
+      location: "Nonthaburi, Nonthaburi",
+      chargers: 5,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 1",
+      accessibility: "Public",
+      createdDate: "12/01/2023",
+      createdTime: "11 : 23 : 38",
+    },
+    {
+      id: 2,
+      name: "OneCharge Solution 2",
+      location: "Bangkok, Bangkok",
+      chargers: 8,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 2",
+      accessibility: "Private",
+      createdDate: "12/02/2023",
+      createdTime: "10 : 15 : 20",
+    },
+    {
+      id: 3,
+      name: "OneCharge Solution 3",
+      location: "Chiang Mai, Chiang Mai",
+      chargers: 3,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 3",
+      accessibility: "Public",
+      createdDate: "12/03/2023",  
+      createdTime: "09 : 45 : 55",
+    },
+    {
+      id: 4,
+      name: "OneCharge Solution 4",
+      location: "Phuket, Phuket",
+      chargers: 6,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 4",
+      accessibility: "Private",
+      createdDate: "12/04/2023",
+      createdTime: "14 : 30 : 10",
+    },
+    {
+      id: 5,
+      name: "OneCharge Solution 5",
+      location: "Pattaya, Chon Buri",
+      chargers: 4,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 5",
+      accessibility: "Public",
+      createdDate: "12/05/2023",
+      createdTime: "11 : 23 : 38",  
+    },
+    {
+      id: 6,
+      name: "OneCharge Solution 6",
+      location: "Ayutthaya, Ayutthaya",
+      chargers: 2,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 6",
+      accessibility: "Private",
+      createdDate: "12/06/2023",
+      createdTime: "10 : 15 : 20",
+    },
+    {
+      id: 7,
+      name: "OneCharge Solution 7",
+      location: "Chiang Mai, Chiang Mai",
+      chargers: 3,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 7",
+      accessibility: "Public",
+      createdDate: "12/07/2023",
+      createdTime: "09 : 45 : 55",
+    },
+    {
+      id: 8,
+      name: "OneCharge Solution 8",
+      location: "Chon Buri, Chon Buri",
+      chargers: 6,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 8",
+      accessibility: "Private",
+      createdDate: "12/08/2023",
+      createdTime: "14 : 30 : 10",
+    },
+    {
+      id: 9,
+      name: "OneCharge Solution 9",
+      location: "Phuket, Phuket",
+      chargers: 4,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 9",
+      accessibility: "Public",
+      createdDate: "12/09/2023",
+      createdTime: "16 : 20 : 45",
+    },
+    {
+      id: 10,
+      name: "OneCharge Solution 10",
+      location: "Ayutthaya, Ayutthaya",
+      chargers: 2,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 10",
+      accessibility: "Private",
+      createdDate: "12/10/2023",
+      createdTime: "08 : 55 : 30",
+    },
+    {
+      id: 11,
+      name: "OneCharge Solution 11",
+      location: "Nonthaburi, Nonthaburi",
+      chargers: 5,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 11",
+      accessibility: "Public",
+      createdDate: "12/11/2023",
+      createdTime: "11 : 23 : 38",
+    },
+    {
+      id: 12,
+      name: "OneCharge Solution 12",
+      location: "Bangkok, Bangkok",
+      chargers: 8,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 12",
+      accessibility: "Private",
+      createdDate: "12/12/2023",
+      createdTime: "10 : 15 : 20",
+    },
+    {
+      id: 13,
+      name: "OneCharge Solution 13",
+      location: "Chiang Mai, Chiang Mai",
+      chargers: 3,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 13",
+      accessibility: "Public",
+      createdDate: "12/13/2023",
+      createdTime: "09 : 45 : 55",
+    },
+    {
+      id: 14,
+      name: "OneCharge Solution 14",
+      location: "Chon Buri, Chon Buri",
+      chargers: 6,
+      team: "OneCharge Solution",
+      priceGroupName :"Price Group 14",
+      accessibility: "Private",
+      createdDate: "12/14/2023",
+      createdTime: "14 : 30 : 10",
+      }
+  ];
+  
 const Page = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownStatus, setIsDropdownStatus] = useState(false);
   const [selectedValue, setSelectedValue] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [showModal, setShowModal] = useState(false);
-  const [accessibilityFilter, setAccessibilityFilter] = useState("");
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
     setCurrentPage(1); // Reset page when search term changes
   };
 
-  const handleAccessibilityChange = (value: string) => {
-    setAccessibilityFilter(value);
-    setIsDropdownStatus(false);
-    setCurrentPage(1); // Reset page when accessibility filter changes
-  };
 
   const filteredData = data
-  .filter((item) =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase())
-  )
-  .filter((item) =>
-    accessibilityFilter ? item.accessibility === accessibilityFilter : true
-  );
+    .filter((item) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    
 
-const totalPages = Math.ceil(filteredData.length / selectedValue);
-
+  const totalPages = Math.ceil(filteredData.length / selectedValue);
 
   const handleToggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -220,12 +210,11 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
     currentPage * selectedValue
   );
 
-
   return (
-    <div className="mx-4 bg-white h-[400px] p-4 rounded-md">
-      <div className="w-full flex justify-between items-center">
+    <div className="mt-4 h-[400px]  bg-white  p-4 rounded-md">
+     <div className="w-full flex justify-between items-center">
         <p className="text-[#364A63] text-[12px] font-medium">
-          Charging Stations
+            Chargers 
         </p>
         <button
           className="w-[60px] flex justify-between items-center bg-[#355FF5] px-3 py-[6px] rounded-md"
@@ -245,45 +234,13 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
             onChange={handleSearchChange}
             value={searchTerm}
           />
-                   <Image src={"/images/icon_search.png"} width={10} height={10} alt="search" />
-
+          <Image
+            src={"/images/icon_search.png"}
+            width={10}
+            height={10}
+            alt="search"
+          />
         </div>
-        <button
-          className="relative w-[110px] flex justify-between items-center bg-[#ECF2F8] px-3 py-2 border-[1px] border-[#D9D8DF] rounded-md"
-          onClick={() => setIsDropdownStatus(!isDropdownStatus)}
-        >
-          <p className="text-[7px] font-light text-[#A1B1D1]">
-            {accessibilityFilter || "Filter By Accessibility"}
-          </p>
-          {isDropdownStatus ? (
-            <IoIosArrowUp className="text-[#A1B1D1] text-[10px]" />
-          ) : (
-            <IoIosArrowDown className="text-[#A1B1D1] text-[10px]" />
-          )}
-
-          {isDropdownStatus && (
-            <div className="absolute top-10 left-0 w-[100px] bg-white border-[1px] border-[#D9D8DF] rounded-md">
-              <div
-                className="w-full flex  items-center py-2 px-1"
-                onClick={() => handleAccessibilityChange("")}
-              >
-                <p className="text-[#6E82A5] text-[7px] font-light ">All</p>
-              </div>
-              <div
-                className="w-full flex  items-center py-2 px-1"
-                onClick={() => handleAccessibilityChange("Public")}
-              >
-                <p className="text-[#6E82A5] text-[7px] font-light ">Public</p>
-              </div>
-              <div
-                className="w-full flex  items-center py-2 px-1"
-                onClick={() => handleAccessibilityChange("Private")}
-              >
-                <p className="text-[#6E82A5] text-[7px] font-light ">Private</p>
-              </div>
-            </div>
-          )}
-        </button>
       </div>
       <div className="w-full h-[260px]">
         <table className="w-full table-auto border-separate border-spacing-y-3">
@@ -325,7 +282,12 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
                   <td className="w-[20%] py-1">
                     <div className="flex justify-center items-center">
                       <div className="w-[30px] h-[30px]">
-                        <img src="images/station.png" alt="Station" className="p-1"/>
+                        <Image
+                          src={"/images/station.png"}
+                          alt="Station"
+                          width={30}
+                          height={30}
+                        />
                       </div>
                       <div className="flex flex-col justify-center items-start ml-2">
                         <p className="text-[#364A63] text-[7px] font-medium">
@@ -369,10 +331,12 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
                   </td>
                   <td className="w-[13.3%] py-1">
                     <div className="flex justify-center">
-                      <img
-                        src="images/icon_edit.png"
-                        alt="Edit icon"
-                        className="w-[20px]"
+                      <Image
+                        src={"/images/icon_edit.png"}
+                        alt="Delete icon"
+                        width={20}
+                        height={20}
+                        className="w-[20px] ml-2"
                       />
                     </div>
                   </td>
@@ -453,10 +417,12 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
             </li>
           </ul>
         </div>
+        
       </div>
       {showModal && (
         <ModalAddChargingStation onClose={() => setShowModal(false)} />
       )}
+      
     </div>
   );
 };

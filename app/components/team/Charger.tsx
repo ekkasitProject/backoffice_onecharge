@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState, ChangeEvent } from "react";
 import { FaPlus } from "react-icons/fa6";
 import {
@@ -7,164 +8,128 @@ import {
   IoIosArrowForward,
   IoIosArrowUp,
 } from "react-icons/io";
-import ModalAddChargingStation from "../components/ModalAddChargingStation";
-import Image from "next/image";
 
 const data = [
   {
     id: 1,
-    name: "OneCharge Solution 1",
-    location: "Nonthaburi, Nonthaburi",
-    chargers: 5,
+    chargerName: "Piwin Charger 1",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
-    priceGroupName :"Price Group 1",
     accessibility: "Public",
+    status: "Available",
+    connection: "Connected",
     createdDate: "12/01/2023",
     createdTime: "11 : 23 : 38",
   },
   {
     id: 2,
-    name: "OneCharge Solution 2",
-    location: "Bangkok, Bangkok",
-    chargers: 8,
+    chargerName: "Piwin Charger 2",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
-    priceGroupName :"Price Group 2",
     accessibility: "Private",
+    status: "Preparing",
+    connection: "Connected",
     createdDate: "12/02/2023",
     createdTime: "10 : 15 : 20",
   },
   {
     id: 3,
-    name: "OneCharge Solution 3",
-    location: "Chiang Mai, Chiang Mai",
-    chargers: 3,
+    chargerName: "Piwin Charger 3",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
-    priceGroupName :"Price Group 3",
     accessibility: "Public",
-    createdDate: "12/03/2023",  
+    status: "Charging",
+    connection: "Connected",
+    createdDate: "12/03/2023",
     createdTime: "09 : 45 : 55",
   },
   {
     id: 4,
-    name: "OneCharge Solution 4",
-    location: "Phuket, Phuket",
-    chargers: 6,
+    chargerName: "Piwin Charger 4",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
-    priceGroupName :"Price Group 4",
     accessibility: "Private",
+    status: "Faulted",
+    connection: "Not Connected",
     createdDate: "12/04/2023",
     createdTime: "14 : 30 : 10",
   },
   {
     id: 5,
-    name: "OneCharge Solution 5",
-    location: "Pattaya, Chon Buri",
-    chargers: 4,
+    chargerName: "Piwin Charger 5",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
-    priceGroupName :"Price Group 5",
     accessibility: "Public",
+    status: "Offline",
+    connection: "Connected",
     createdDate: "12/05/2023",
-    createdTime: "11 : 23 : 38",  
-  },
-  {
-    id: 6,
-    name: "OneCharge Solution 6",
-    location: "Ayutthaya, Ayutthaya",
-    chargers: 2,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 6",
-    accessibility: "Private",
-    createdDate: "12/06/2023",
-    createdTime: "10 : 15 : 20",
-  },
-  {
-    id: 7,
-    name: "OneCharge Solution 7",
-    location: "Chiang Mai, Chiang Mai",
-    chargers: 3,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 7",
-    accessibility: "Public",
-    createdDate: "12/07/2023",
-    createdTime: "09 : 45 : 55",
-  },
-  {
-    id: 8,
-    name: "OneCharge Solution 8",
-    location: "Chon Buri, Chon Buri",
-    chargers: 6,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 8",
-    accessibility: "Private",
-    createdDate: "12/08/2023",
-    createdTime: "14 : 30 : 10",
-  },
-  {
-    id: 9,
-    name: "OneCharge Solution 9",
-    location: "Phuket, Phuket",
-    chargers: 4,
-    team: "OneCharge Solution",
-    priceGroupName :"Price Group 9",
-    accessibility: "Public",
-    createdDate: "12/09/2023",
     createdTime: "16 : 20 : 45",
   },
   {
-    id: 10,
-    name: "OneCharge Solution 10",
-    location: "Ayutthaya, Ayutthaya",
-    chargers: 2,
+    id: 6,
+    chargerName: "Piwin Charger 6",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
-    priceGroupName :"Price Group 10",
     accessibility: "Private",
-    createdDate: "12/10/2023",
+    status: "Available",
+    connection: "Connected",
+    createdDate: "12/06/2023",
     createdTime: "08 : 55 : 30",
   },
   {
-    id: 11,
-    name: "OneCharge Solution 11",
-    location: "Nonthaburi, Nonthaburi",
-    chargers: 5,
+    id: 7,
+    chargerName: "Piwin Charger 7",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
-    priceGroupName :"Price Group 11",
     accessibility: "Public",
-    createdDate: "12/11/2023",
-    createdTime: "11 : 23 : 38",
+    status: "Available",
+    connection: "Connected",
+    createdDate: "12/07/2023",
+    createdTime: "13 : 10 : 15",
   },
   {
-    id: 12,
-    name: "OneCharge Solution 12",
-    location: "Bangkok, Bangkok",
-    chargers: 8,
+    id: 8,
+    chargerName: "Piwin Charger 8",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
-    priceGroupName :"Price Group 12",
     accessibility: "Private",
-    createdDate: "12/12/2023",
-    createdTime: "10 : 15 : 20",
+    status: "Available",
+    connection: "Connected",
+    createdDate: "12/08/2023",
+    createdTime: "17 : 45 : 22",
   },
   {
-    id: 13,
-    name: "OneCharge Solution 13",
-    location: "Chiang Mai, Chiang Mai",
-    chargers: 3,
+    id: 9,
+    chargerName: "Piwin Charger 9",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
-    priceGroupName :"Price Group 13",
     accessibility: "Public",
-    createdDate: "12/13/2023",
-    createdTime: "09 : 45 : 55",
+    status: "Available",
+    connection: "Connected",
+    createdDate: "12/09/2023",
+    createdTime: "09 : 00 : 11",
   },
   {
-    id: 14,
-    name: "OneCharge Solution 14",
-    location: "Chon Buri, Chon Buri",
-    chargers: 6,
+    id: 10,
+    chargerName: "Piwin Charger 10",
+    serialNumber: "123400012411242",
+    chargingStation: "Muang Thong Thani Tower",
     team: "OneCharge Solution",
-    priceGroupName :"Price Group 14",
     accessibility: "Private",
-    createdDate: "12/14/2023",
-    createdTime: "14 : 30 : 10",
-    }
+    status: "Available",
+    connection: "Connected",
+    createdDate: "12/10/2023",
+    createdTime: "12 : 20 : 30",
+  },
 ];
 
 const Page = () => {
@@ -188,15 +153,14 @@ const Page = () => {
   };
 
   const filteredData = data
-  .filter((item) =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase())
-  )
-  .filter((item) =>
-    accessibilityFilter ? item.accessibility === accessibilityFilter : true
-  );
+    .filter((item) =>
+      item.chargerName.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .filter((item) =>
+      accessibilityFilter ? item.accessibility === accessibilityFilter : true
+    );
 
-const totalPages = Math.ceil(filteredData.length / selectedValue);
-
+  const totalPages = Math.ceil(filteredData.length / selectedValue);
 
   const handleToggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -220,9 +184,8 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
     currentPage * selectedValue
   );
 
-
   return (
-    <div className="mx-4 bg-white h-[400px] p-4 rounded-md">
+    <div className="mt-4 h-[400px]  bg-white  p-4 rounded-md">
       <div className="w-full flex justify-between items-center">
         <p className="text-[#364A63] text-[12px] font-medium">
           Charging Stations
@@ -245,69 +208,41 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
             onChange={handleSearchChange}
             value={searchTerm}
           />
-                   <Image src={"/images/icon_search.png"} width={10} height={10} alt="search" />
-
+          <Image
+            src={"/images/icon_search.png"}
+            width={10}
+            height={10}
+            alt="search"
+          />
         </div>
-        <button
-          className="relative w-[110px] flex justify-between items-center bg-[#ECF2F8] px-3 py-2 border-[1px] border-[#D9D8DF] rounded-md"
-          onClick={() => setIsDropdownStatus(!isDropdownStatus)}
-        >
-          <p className="text-[7px] font-light text-[#A1B1D1]">
-            {accessibilityFilter || "Filter By Accessibility"}
-          </p>
-          {isDropdownStatus ? (
-            <IoIosArrowUp className="text-[#A1B1D1] text-[10px]" />
-          ) : (
-            <IoIosArrowDown className="text-[#A1B1D1] text-[10px]" />
-          )}
 
-          {isDropdownStatus && (
-            <div className="absolute top-10 left-0 w-[100px] bg-white border-[1px] border-[#D9D8DF] rounded-md">
-              <div
-                className="w-full flex  items-center py-2 px-1"
-                onClick={() => handleAccessibilityChange("")}
-              >
-                <p className="text-[#6E82A5] text-[7px] font-light ">All</p>
-              </div>
-              <div
-                className="w-full flex  items-center py-2 px-1"
-                onClick={() => handleAccessibilityChange("Public")}
-              >
-                <p className="text-[#6E82A5] text-[7px] font-light ">Public</p>
-              </div>
-              <div
-                className="w-full flex  items-center py-2 px-1"
-                onClick={() => handleAccessibilityChange("Private")}
-              >
-                <p className="text-[#6E82A5] text-[7px] font-light ">Private</p>
-              </div>
-            </div>
-          )}
-        </button>
       </div>
       <div className="w-full h-[260px]">
         <table className="w-full table-auto border-separate border-spacing-y-3">
           <thead className="bg-[#355FF5] text-white">
             <tr className="text-center">
-              <th className="w-[20%] px-4 py-2 rounded-tl-lg text-[7px] font-normal uppercase">
-                Charging Stations
-              </th>
-              <th className="w-[13.3%] px-4 py-2 text-[7px] font-normal uppercase">
+              <th className="w-[15%] px-4 py-2 rounded-tl-lg text-[7px] font-normal uppercase">
                 Chargers
               </th>
-              <th className="w-[13.3%] px-4 py-2 text-[7px] font-normal uppercase">
+              <th className="w-[15%] px-4 py-2 text-[7px] font-normal uppercase">
+                Charging Stations
+              </th>
+              <th className="w-[10%] px-4 py-2 text-[7px] font-normal uppercase">
                 Team
               </th>
-              <th className="w-[13.3%] px-4 py-2 text-[7px] font-normal uppercase">
-                Pricing
-              </th>
-              <th className="w-[13.3%] px-4 py-2 text-[7px] font-normal uppercase">
+              <th className="w-[10%] px-4 py-2 text-[7px] font-normal uppercase">
                 Accessibility
               </th>
-              <th className="w-[13.3%] px-4 py-2 text-[7px] font-normal uppercase">
+              <th className="w-[10%] px-4 py-2 text-[7px] font-normal uppercase">
+                Status
+              </th>
+              <th className="w-[10%] px-4 py-2 text-[7px] font-normal uppercase">
+                Connection
+              </th>
+              <th className="w-[10%] px-4 py-2 text-[7px] font-normal uppercase">
                 Created
               </th>
-              <th className="w-[13.3%] px-4 py-2 rounded-tr-lg text-[7px] font-normal uppercase">
+              <th className="w-[10%] px-4 py-2 rounded-tr-lg text-[7px] font-normal uppercase">
                 Action
               </th>
             </tr>
@@ -316,64 +251,109 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
         <div className="h-[220px] overflow-y-auto">
           <table className="w-full table-fixed border-separate border-spacing-y-1">
             <tbody className="w-full">
-              {paginatedData.map((station) => (
+              {paginatedData.map((charger) => (
                 <tr
-                  key={station.id}
+                  key={charger.id}
                   className="text-center my-2 bg-white hover:bg-[#e1e0e045] cursor-pointer"
                   style={{ boxShadow: "2px 2px 7px 4px rgba(0, 0, 0, 0.05)" }}
                 >
-                  <td className="w-[20%] py-1">
+                  <td className="w-[15%] py-1">
                     <div className="flex justify-center items-center">
                       <div className="w-[30px] h-[30px]">
-                        <img src="images/station.png" alt="Station" className="p-1"/>
+                        <Image
+                          src={"/images/image_charger.png"}
+                          alt="Charger"
+                          width={30}
+                          height={30}
+                        />
                       </div>
                       <div className="flex flex-col justify-center items-start ml-2">
                         <p className="text-[#364A63] text-[7px] font-medium">
-                          {station.name}
+                          {charger.chargerName}
                         </p>
                         <p className="text-[#364A63] text-[7px] font-extralight">
-                          {station.location
-                            ? station.location.length > 20
-                              ? station.location.substring(0, 20) + "..."
-                              : station.location
+                          S/N
+                          {charger.serialNumber
+                            ? charger.serialNumber.length > 20
+                              ? " " +
+                                charger.serialNumber.substring(0, 20) +
+                                "..."
+                              : " " + charger.serialNumber
                             : "N/A"}
                         </p>
                       </div>
                     </div>
                   </td>
-                  <td className="w-[13.3%] py-1 text-[#364A63] text-[7px]">
-                    {station.chargers}
-                  </td>
-                  <td className="w-[13.3%] py-1">
-                    <div className="bg-[#EFF2FC] px-2 py-1 rounded-md">
-                      <p className="text-[#355FF5] text-[7px] font-medium">
-                        {station.team}
+                  <td className="w-[15%] py-1">
+                    <div className="bg-[#EFF2FC] mx-4 py-1 rounded-md">
+                      <p className="text-[#355FF5] text-[6px] font-normal">
+                        {charger.chargingStation}
                       </p>
                     </div>
                   </td>
-                  <td className="w-[13.3%] py-1 text-[#364A63] text-[7px]">
-                    {station.priceGroupName}
+
+                  <td className="w-[10%] py-1">
+                    <div className="bg-[#EFF2FC] mx-2 py-1 rounded-md">
+                      <p className="text-[#355FF5] text-[6px] font-normal">
+                        {charger.team}
+                      </p>
+                    </div>
                   </td>
-                  <td className="w-[13.3%] py-1 text-[#364A63] text-[7px]">
-                    {station.accessibility}
+
+                  <td className="w-[10%] py-1 text-[#364A63] text-[7px]">
+                    {charger.accessibility}
                   </td>
-                  <td className="w-[13.3%] py-1">
+                  <td className="w-[10%] py-1">
+                    <div
+                      className={` mx-4 py-1 rounded-md ${
+                        charger.status === "Available"
+                          ? "bg-[#DFF8F3]"
+                          : charger.status === "Preparing" ||
+                            charger.status === "Charging"
+                          ? "bg-[#FFE5D1]"
+                          : charger.status === "Faulted"
+                          ? "bg-[#FFDCD4]"
+                          : "bg-[#EDEDED]"
+                      }`}
+                    >
+                      <p
+                        className={`text-[7px] font-medium ${
+                          charger.status === "Available"
+                            ? "text-[#0D8A72]"
+                            : charger.status === "Preparing" ||
+                              charger.status === "Charging"
+                            ? "text-[#FF9640]"
+                            : charger.status === "Faulted"
+                            ? "text-[#BC3A00]"
+                            : "text-[#6B6B6B]"
+                        }`}
+                      >
+                        {charger.status}
+                      </p>
+                    </div>
+                  </td>
+                  <td className="w-[10%] py-1 text-[#364A63] text-[7px]">
+                    {charger.connection}
+                  </td>
+                  <td className="w-[10%] py-1">
                     <div className="flex flex-col justify-center items-center">
                       <p className="text-[#364A63] text-[7px] font-light">
-                        {station.createdDate}
+                        {charger.createdDate}
                       </p>
                       <p className="text-[#364A63] text-[7px] font-light">
-                        {station.createdTime}
+                        {charger.createdDate}
                       </p>
                     </div>
                   </td>
-                  <td className="w-[13.3%] py-1">
+                  <td className="w-[10%] py-1">
                     <div className="flex justify-center">
-                      <img
-                        src="images/icon_edit.png"
-                        alt="Edit icon"
-                        className="w-[20px]"
-                      />
+                      <Image
+                        src={"/images/icon_edit.png"}
+                        alt="Delete icon"
+                        width={20}
+                        height={20}
+                        className="w-[20px] ml-2"
+                      />{" "}
                     </div>
                   </td>
                 </tr>
@@ -454,9 +434,6 @@ const totalPages = Math.ceil(filteredData.length / selectedValue);
           </ul>
         </div>
       </div>
-      {showModal && (
-        <ModalAddChargingStation onClose={() => setShowModal(false)} />
-      )}
     </div>
   );
 };
