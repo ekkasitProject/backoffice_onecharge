@@ -132,7 +132,7 @@ const data = [
   },
 ];
 
-const Page = () => {
+const Charger = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownStatus, setIsDropdownStatus] = useState(false);
   const [selectedValue, setSelectedValue] = useState(5);
@@ -187,7 +187,7 @@ const Page = () => {
   return (
     <div className="mt-4 h-[400px]  bg-white  p-4 rounded-md">
       <div className="w-full flex justify-between items-center">
-        <p className="text-[#364A63] text-[12px] font-medium">
+        <p className="text-[#6E82A5] text-[12px] font-medium">
           Charging Stations
         </p>
         <button
@@ -268,10 +268,10 @@ const Page = () => {
                         />
                       </div>
                       <div className="flex flex-col justify-center items-start ml-2">
-                        <p className="text-[#364A63] text-[7px] font-medium">
+                        <p className="text-[#6E82A5] text-[7px] font-medium">
                           {charger.chargerName}
                         </p>
-                        <p className="text-[#364A63] text-[7px] font-extralight">
+                        <p className="text-[#6E82A5] text-[7px] font-extralight">
                           S/N
                           {charger.serialNumber
                             ? charger.serialNumber.length > 20
@@ -300,7 +300,7 @@ const Page = () => {
                     </div>
                   </td>
 
-                  <td className="w-[10%] py-1 text-[#364A63] text-[7px]">
+                  <td className="w-[10%] py-1 text-[#6E82A5] text-[7px]">
                     {charger.accessibility}
                   </td>
                   <td className="w-[10%] py-1">
@@ -332,15 +332,15 @@ const Page = () => {
                       </p>
                     </div>
                   </td>
-                  <td className="w-[10%] py-1 text-[#364A63] text-[7px]">
+                  <td className="w-[10%] py-1 text-[#6E82A5] text-[7px]">
                     {charger.connection}
                   </td>
                   <td className="w-[10%] py-1">
                     <div className="flex flex-col justify-center items-center">
-                      <p className="text-[#364A63] text-[7px] font-light">
+                      <p className="text-[#6E82A5] text-[7px] font-light">
                         {charger.createdDate}
                       </p>
-                      <p className="text-[#364A63] text-[7px] font-light">
+                      <p className="text-[#6E82A5] text-[7px] font-light">
                         {charger.createdDate}
                       </p>
                     </div>
@@ -364,14 +364,14 @@ const Page = () => {
       </div>
       <div className="w-full h-[50px] flex justify-between items-center my-2">
         <div className="w-[200px] flex justify-between items-center">
-          <p className="text-[#364A63] text-[7px] font-light">
+          <p className="text-[#6E82A5] text-[7px] font-light">
             Showing {(currentPage - 1) * selectedValue + 1} to{" "}
             {Math.min(currentPage * selectedValue, data.length)} of{" "}
             {data.length} Results
           </p>
           <div className="relative">
             <div
-              className="w-[70px] flex justify-between items-center cursor-pointer text-[#364A63] text-[7px] font-light bg-white border border-gray-300 px-3 py-1"
+              className="w-[70px] flex justify-between items-center cursor-pointer text-[#6E82A5] text-[7px] font-light bg-white border border-gray-300 px-3 py-1"
               onClick={handleToggleDropdown}
             >
               {selectedValue}{" "}
@@ -399,7 +399,7 @@ const Page = () => {
         <div className="">
           <ul className="flex justify-between items-center">
             <li
-              className={`px-2 py-[3px] text-[#364A63] text-[7px] font-light ${
+              className={`px-2 py-[3px] text-[#6E82A5] text-[7px] font-light ${
                 currentPage === 1
                   ? "cursor-not-allowed opacity-50"
                   : "cursor-pointer"
@@ -414,7 +414,7 @@ const Page = () => {
                 className={`px-2 py-[3px] ${
                   currentPage === i + 1
                     ? "text-[#0026FF] bg-[#D0DAFF] font-semibold rounded-md"
-                    : "text-[#364A63] font-light"
+                    : "text-[#6E82A5] font-light"
                 } text-[7px] cursor-pointer`}
                 onClick={() => handlePageChange(i + 1)}
               >
@@ -422,7 +422,7 @@ const Page = () => {
               </li>
             ))}
             <li
-              className={`px-2 py-[3px] text-[#364A63] text-[7px] font-light ${
+              className={`px-2 py-[3px] text-[#6E82A5] text-[7px] font-light ${
                 currentPage === totalPages
                   ? "cursor-not-allowed opacity-50"
                   : "cursor-pointer"
@@ -438,4 +438,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Charger;

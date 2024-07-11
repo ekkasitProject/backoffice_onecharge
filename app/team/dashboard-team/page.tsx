@@ -1,6 +1,7 @@
 "use client";
 import Charger from "@/app/components/team/Charger";
 import ChargingStations from "@/app/components/team/ChargingStations";
+import Members from "@/app/components/team/Members";
 import Overview from "@/app/components/team/Overview";
 import React, { useState } from "react";
 
@@ -78,6 +79,7 @@ export default function page() {
       {currentComponent === "Overview" && <Overview />}
       {currentComponent === "Charging Stations" && <ChargingStations />}
       {currentComponent === "Charger" && <Charger />}
+      {currentComponent === "Members" && <Members />}
       <div className="h-[70px]"/> 
     </div>
   );
